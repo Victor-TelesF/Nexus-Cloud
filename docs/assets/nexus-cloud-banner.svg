@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
+  <title id="title">Nexus Cloud</title>
+  <desc id="desc">Laboratório de SQL e análise de dados. Capa em azul escuro com uma ilustração de nuvem conectada a dados.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0b1224"/>
+      <stop offset="1" stop-color="#142e48"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#70e4ce"/>
+      <stop offset="1" stop-color="#6babf4"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#91b5d0" stroke-opacity=".06"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="400" rx="24" fill="url(#background)"/>
+  <rect width="1200" height="400" rx="24" fill="url(#grid)"/>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <rect x="64" y="66" width="32" height="4" rx="2" fill="#70e4ce"/>
+    <text x="110" y="74" fill="#b8d0e4" font-size="14" letter-spacing="3">LABORATÓRIO DE DADOS</text>
+    <text x="60" y="174" fill="#f2f7fc" font-size="72" font-weight="700" letter-spacing="-3">Nexus Cloud</text>
+    <text x="64" y="224" fill="#b8cce0" font-size="23">Perguntar. Consultar. Compreender.</text>
+    <g font-size="14" fill="#d4e6f5" text-anchor="middle">
+      <rect x="64" y="282" width="142" height="36" rx="18" fill="#203c55"/>
+      <text x="135" y="305">PostgreSQL 17</text>
+      <rect x="218" y="282" width="156" height="36" rx="18" fill="#203c55"/>
+      <text x="296" y="305">Análise de dados</text>
+      <rect x="386" y="282" width="144" height="36" rx="18" fill="#203c55"/>
+      <text x="458" y="305">Estudo prático</text>
+    </g>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="944" cy="194" r="134" stroke="#86c0e9" stroke-opacity=".12"/>
+    <circle cx="944" cy="194" r="108" stroke="#86c0e9" stroke-opacity=".1" stroke-dasharray="3 10"/>
+    <path d="M892 224v51h-62m114-51v80m52-80v51h62" stroke="#6394b8" stroke-width="2"/>
+    <path d="M884 222a35 35 0 0 1-1-70 62 62 0 0 1 119-4 38 38 0 0 1 2 76H884Z" fill="#18384e" stroke="url(#accent)" stroke-width="3"/>
+    <ellipse cx="944" cy="171" rx="26" ry="10" stroke="#8ee6dc" stroke-width="2"/>
+    <path d="M918 171v28c0 13 52 13 52 0v-28m-52 14c0 13 52 13 52 0" stroke="#8ee6dc" stroke-width="2"/>
+    <rect x="810" y="259" width="36" height="32" rx="7" fill="#18384e" stroke="#70e4ce" stroke-width="2"/>
+    <path d="M819 270h18m-18 10h12" stroke="#70e4ce" stroke-width="2"/>
+    <rect x="926" y="297" width="36" height="32" rx="7" fill="#18384e" stroke="#80bbf2" stroke-width="2"/>
+    <path d="M935 319v-7m9 7v-13m9 13v-19" stroke="#80bbf2" stroke-width="2"/>
+    <rect x="1042" y="259" width="36" height="32" rx="7" fill="#18384e" stroke="#70e4ce" stroke-width="2"/>
+    <path d="m1056 269-6 6 6 6m8-12 6 6-6 6" stroke="#70e4ce" stroke-width="2"/>
+  </g>
+</svg>
