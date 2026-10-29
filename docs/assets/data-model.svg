@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="710" viewBox="0 0 1200 710" role="img" aria-labelledby="title desc">
+  <title id="title">Modelo de dados — schema nexus</title>
+  <desc id="desc">Clientes e serviços possuem uma relação de um para muitos com contratos. Contratos possuem uma relação de um para muitos com pagamentos. Servidores é uma tabela independente. Os cartões apresentam os principais campos; a definição completa está no arquivo SQL do modelo.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="m1 1 6 3-6 3" fill="none" stroke="#6598b5" stroke-width="1.5"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="710" rx="24" fill="#0e192b"/>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <text x="48" y="51" fill="#8ee6dc" font-size="13" letter-spacing="2">SCHEMA NEXUS</text>
+    <text x="48" y="86" fill="#f2f7fc" font-size="27" font-weight="600">Como os dados se conectam</text>
+    <text x="48" y="116" fill="#b8cce0" font-size="16">Visão resumida das entidades e de suas chaves.</text>
+    <g fill="none" stroke="#6598b5" stroke-width="2" marker-end="url(#arrow)">
+      <path d="M322 260h128"/>
+      <path d="M878 260H750"/>
+      <path d="M600 384v79"/>
+    </g>
+    <g fill="#b8cce0" font-size="14" text-anchor="middle">
+      <text x="384" y="245">1 → N</text>
+      <text x="814" y="245">N ← 1</text>
+      <text x="630" y="432">1 → N</text>
+    </g>
+    <g>
+      <rect x="48" y="176" width="274" height="208" rx="12" fill="#17273d" stroke="#30475f"/>
+      <path d="M64 225h242" stroke="#30475f"/>
+      <text x="70" y="208" fill="#8ee6dc" font-size="20" font-weight="600">clientes</text>
+      <g fill="#d8e5f0" font-size="16">
+        <text x="70" y="254">id <tspan fill="#8ee6dc" font-size="12">PK</tspan></text>
+        <text x="70" y="285">nome_empresa</text>
+        <text x="70" y="316">setor</text>
+        <text x="70" y="347">cidade · estado</text>
+      </g>
+    </g>
+    <g>
+      <rect x="450" y="176" width="300" height="208" rx="12" fill="#17273d" stroke="#5caaa8"/>
+      <path d="M466 225h268" stroke="#30475f"/>
+      <text x="472" y="208" fill="#8ee6dc" font-size="20" font-weight="600">contratos</text>
+      <g fill="#d8e5f0" font-size="16">
+        <text x="472" y="254">id <tspan fill="#8ee6dc" font-size="12">PK</tspan></text>
+        <text x="472" y="285">id_cliente <tspan fill="#9dc9fb" font-size="12">FK</tspan></text>
+        <text x="472" y="316">id_servico <tspan fill="#9dc9fb" font-size="12">FK</tspan></text>
+        <text x="472" y="347">status · data_inicio · data_fim</text>
+      </g>
+    </g>
+    <g>
+      <rect x="878" y="176" width="274" height="208" rx="12" fill="#17273d" stroke="#30475f"/>
+      <path d="M894 225h242" stroke="#30475f"/>
+      <text x="900" y="208" fill="#8ee6dc" font-size="20" font-weight="600">servico</text>
+      <g fill="#d8e5f0" font-size="16">
+        <text x="900" y="254">id <tspan fill="#8ee6dc" font-size="12">PK</tspan></text>
+        <text x="900" y="285">nome_servico · categoria</text>
+        <text x="900" y="316">preco_mensal · custo_mensal</text>
+        <text x="900" y="347">ativo</text>
+      </g>
+    </g>
+    <g>
+      <rect x="450" y="464" width="300" height="192" rx="12" fill="#17273d" stroke="#30475f"/>
+      <path d="M466 513h268" stroke="#30475f"/>
+      <text x="472" y="496" fill="#8ee6dc" font-size="20" font-weight="600">pagamentos</text>
+      <g fill="#d8e5f0" font-size="16">
+        <text x="472" y="542">id <tspan fill="#8ee6dc" font-size="12">PK</tspan> · id_contrato <tspan fill="#9dc9fb" font-size="12">FK</tspan></text>
+        <text x="472" y="573">valor · status</text>
+        <text x="472" y="604">data_vencimento</text>
+        <text x="472" y="635">data_pagamento</text>
+      </g>
+    </g>
+    <g>
+      <rect x="48" y="464" width="274" height="192" rx="12" fill="#17273d" stroke="#30475f" stroke-dasharray="5 5"/>
+      <path d="M64 513h242" stroke="#30475f"/>
+      <text x="70" y="496" fill="#9dc9fb" font-size="20" font-weight="600">servidores</text>
+      <g fill="#d8e5f0" font-size="16">
+        <text x="70" y="542">id <tspan fill="#8ee6dc" font-size="12">PK</tspan> · nome_servidor</text>
+        <text x="70" y="573">regiao · capacidade_gb</text>
+        <text x="70" y="604">custo_mensal · status</text>
+        <text x="70" y="635" fill="#b8cce0" font-size="13">Sem vínculo com as demais tabelas</text>
+      </g>
+    </g>
+    <g font-size="14" fill="#b8cce0">
+      <text x="878" y="544"><tspan fill="#8ee6dc">PK</tspan>  Chave primária</text>
+      <text x="878" y="574"><tspan fill="#9dc9fb">FK</tspan>  Chave estrangeira</text>
+      <text x="878" y="604">1 → N  Um para muitos</text>
+      <text x="878" y="642" font-size="12">Campos selecionados para apresentação.</text>
+    </g>
+  </g>
+</svg>
