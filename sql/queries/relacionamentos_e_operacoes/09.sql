@@ -1,7 +1,6 @@
 --Clientes com múltiplos contratos
 --Quais empresas possuem três ou mais contratos ativos? 
 --Quantos contratos cada uma possui?
-
 SELECT c.nome_empresa AS cliente,
 COUNT(a.id) AS "contratos ativos"
 FROM nexus.clientes c
