@@ -16,10 +16,19 @@ Como distinguir o que uma empresa de nuvem vendeu, o que cobrou e o que de fato 
 
 ## Trabalhar no ambiente local
 
-1. Na primeira configuração, copie `.env.example` para `.env` e defina as credenciais. Use Docker com Compose.
-2. Inicie o PostgreSQL 17 com `docker compose up -d db`. No VS Code, conecte a extensão PostgreSQL da Microsoft a `127.0.0.1`, usando o banco, o usuário, a senha e a porta do seu `.env` (padrão 5432).
-3. Na base de estudo populada, abra a [pasta de consultas](sql/analysis/), execute sua tentativa e compare as linhas retornadas com o pedido. Para pedir feedback ao Codex no repositório, escreva, por exemplo, **“Revise o relatório 12 e me dê uma pista para testar minha lógica.”** O fluxo está em [AGENTS.md](AGENTS.md).
+1. Instale Docker com Compose. Na primeira configuração, copie `.env.example` para `.env` e defina as credenciais.
+2. Na raiz do repositório, inicie o ambiente e aguarde a carga:
 
-Em um volume novo, o Compose inicia o banco vazio. O [modelo SQL](sql/models/model.sql) pressupõe que o schema `nexus` já exista. A carga de dados também é uma etapa separada. Para encerrar o ambiente preservando o volume, use `docker compose down`.
+   ```bash
+   docker compose up -d --build
+   docker compose wait seed
+   docker compose logs seed
+   ```
+
+   O PostgreSQL 17 inicia primeiro. Depois, o serviço `seed` cria o schema `nexus`, aplica o [modelo SQL](sql/models/model.sql) e popula uma base vazia com dados fictícios. A carga contém 1.000 clientes, 20 serviços, 5.000 contratos, 30.000 cobranças e 30 servidores. O serviço `seed` termina com código `0` quando conclui; isso é esperado.
+3. No VS Code, conecte a extensão PostgreSQL da Microsoft a `127.0.0.1`, usando o banco, o usuário, a senha e a porta do seu `.env` (padrão 5432).
+4. Abra a [pasta de consultas](sql/analysis/), execute sua tentativa e compare as linhas retornadas com o pedido. Para pedir feedback ao Codex no repositório, escreva, por exemplo, **“Revise o relatório 12 e me dê uma pista para testar minha lógica.”** O fluxo está em [AGENTS.md](AGENTS.md).
+
+Ao iniciar novamente, a carga automática verifica se há dados e os preserva, sem duplicá-los. Para encerrar o ambiente mantendo os volumes, use `docker compose down`. Para iniciar somente o banco, sem executar a carga, use `docker compose up -d db`. Os parâmetros de simulação, reprodutibilidade e execução local estão no [guia da carga](seeds/README.md).
 
 Na etapa visual, o [ambiente Python](pyproject.toml) inclui pandas, Matplotlib e seaborn. O roteiro recomenda Power BI para o painel final e admite uma biblioteca gráfica em Python.
