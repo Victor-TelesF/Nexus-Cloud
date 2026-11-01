@@ -7,5 +7,4 @@ WHERE NOT EXISTS (
     SELECT id_servico
     FROM nexus.contratos c
     WHERE c.id_servico = s.id
-)
-LIMIT 10;
+);
