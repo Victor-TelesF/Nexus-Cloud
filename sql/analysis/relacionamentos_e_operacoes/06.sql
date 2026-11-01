@@ -12,5 +12,4 @@ ON contrato.id_cliente = cliente.id
 INNER JOIN nexus.servico servico
 ON servico.id = contrato.id_servico
 WHERE contrato.status = 'ativo'
-ORDER BY "Valor Mensal" DESC
-LIMIT 50; 
+ORDER BY "Valor Mensal" DESC; 
