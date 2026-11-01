@@ -5,5 +5,4 @@
 SELECT nome_servico AS Serviço, categoria, preco_mensal AS preço
 FROM nexus.servico
 WHERE preco_mensal > 300 AND ativo = TRUE
-ORDER BY preço DESC
-LIMIT 10;
+ORDER BY preço DESC;
