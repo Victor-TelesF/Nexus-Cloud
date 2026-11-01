@@ -4,3 +4,4 @@
 -- Quais são os dez clientes que mais contribuíram para a receita efetivamente recebida pela Nexus
 -- Cloud?
 
+
