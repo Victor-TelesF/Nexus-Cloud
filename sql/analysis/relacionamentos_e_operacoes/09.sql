@@ -6,7 +6,6 @@ COUNT(a.id) AS "contratos ativos"
 FROM nexus.clientes c
 JOIN nexus.contratos a ON a.id_cliente = c.id
 WHERE a.status = 'ativo' 
-GROUP BY c.nome_empresa
+GROUP BY c.nome_empresa, c.id
 HAVING COUNT(a.id) >= 3
-ORDER BY "contratos ativos" DESC
-LIMIT 20;
+ORDER BY "contratos ativos" DESC;
