@@ -18,7 +18,7 @@ Como distinguir o que uma empresa de nuvem vendeu, o que cobrou e o que de fato 
 
 1. Na primeira configuração, copie `.env.example` para `.env` e defina as credenciais. Use Docker com Compose.
 2. Inicie o PostgreSQL 17 com `docker compose up -d db`. No VS Code, conecte a extensão PostgreSQL da Microsoft a `127.0.0.1`, usando o banco, o usuário, a senha e a porta do seu `.env` (padrão 5432).
-3. Na base de estudo populada, abra a [pasta de consultas](sql/queries/), execute sua tentativa e compare as linhas retornadas com o pedido. Para pedir feedback ao Codex no repositório, escreva, por exemplo, **“Revise o relatório 12 e me dê uma pista para testar minha lógica.”** O fluxo está em [AGENTS.md](AGENTS.md).
+3. Na base de estudo populada, abra a [pasta de consultas](sql/analysis/), execute sua tentativa e compare as linhas retornadas com o pedido. Para pedir feedback ao Codex no repositório, escreva, por exemplo, **“Revise o relatório 12 e me dê uma pista para testar minha lógica.”** O fluxo está em [AGENTS.md](AGENTS.md).
 
 Em um volume novo, o Compose inicia o banco vazio. O [modelo SQL](sql/models/model.sql) pressupõe que o schema `nexus` já exista. A carga de dados também é uma etapa separada. Para encerrar o ambiente preservando o volume, use `docker compose down`.
 
