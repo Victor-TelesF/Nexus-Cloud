@@ -8,9 +8,11 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
+    "ipykernel>=7.4.0",
     "matplotlib>=3.11.2",
     "numpy>=2.5.4",
     "pandas>=3.1.0",
     "psycopg[binary]>=3.3.6",
     "seaborn>=0.13.2",
+    "streamlit>=1.66.1",
 ]
