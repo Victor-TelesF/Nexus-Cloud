@@ -18,6 +18,10 @@ Atualização de 01/11/2026 após a remoção dos limites pelo estudante: 02, 06
 
 ## Entregas e evidências
 
+Configuração de 02/11/2026: a etapa visual passa a usar Jupyter Notebook no VS Code (26–29) e Streamlit (30), conforme o [guia do ambiente](06-ambiente-analise.md). O arquivo inicial em `dashboards/app.py` é apenas a estrutura de execução. A preparação do ambiente não constitui uma resposta ou revisão dos desafios; os itens 26–30 permanecem pendentes.
+
+Validação do ambiente em 02/11/2026: dependências sincronizadas com `uv sync --locked`; arquivos JSON/TOML e links locais conferidos; kernel de `.venv` iniciado no diretório definido em `.vscode/settings.json`, com importações das bibliotecas e de módulo local e acesso relativo ao modelo SQL; página inicial de `dashboards/app.py` renderizada e servidor Streamlit com resposta HTTP de saúde. O servidor de verificação foi encerrado. A interface do VS Code e a seleção de kernel pelo editor não foram exercitadas nesta validação; nenhuma consulta foi executada contra o banco.
+
 Cada linha mostra o pedido, a situação da entrega, a evidência e o parecer.
 
 ### Etapa 1 · Conhecendo a empresa (01–05)
