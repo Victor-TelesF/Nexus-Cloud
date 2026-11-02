@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Nexus: sincronizar ambiente Python",
+      "type": "process",
+      "command": "uv",
+      "args": ["sync", "--locked"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Nexus: iniciar Streamlit",
+      "type": "process",
+      "command": "uv",
+      "args": ["run", "--locked", "python", "-m", "streamlit", "run", "dashboards/app.py"],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": { "PYTHONPATH": "${workspaceFolder}" }
+      },
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" },
+      "runOptions": { "instanceLimit": 1 }
+    }
+  ]
+}
