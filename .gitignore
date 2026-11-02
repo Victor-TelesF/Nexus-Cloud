@@ -15,3 +15,7 @@ wheels/
 !.env.example
 postgres_data/
 .nexus-seed/
+
+# Notebook checkpoints and local Streamlit credentials
+.ipynb_checkpoints/
+.streamlit/secrets.toml
