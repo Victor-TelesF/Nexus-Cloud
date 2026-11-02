@@ -12,6 +12,7 @@ Como distinguir o que uma empresa de nuvem vendeu, o que cobrou e o que de fato 
 | Retomar a última tentativa ou pedir revisão | [Checklist e evidências](docs/03-progresso.md) |
 | Consultar o modelo e as regras de negócio | [Contexto da Nexus Cloud](docs/01-contexto-negocio.md) |
 | Preparar os gráficos e o painel | [Entregáveis visuais](docs/04-visualizacoes-dashboard.md) |
+| Configurar Jupyter e abrir o Streamlit no VS Code | [Ambiente de análise](docs/06-ambiente-analise.md) |
 | Entender como uma entrega será avaliada | [Critérios de correção](docs/05-criterios-correcao.md) |
 
 ## Trabalhar no ambiente local
@@ -31,4 +32,4 @@ Como distinguir o que uma empresa de nuvem vendeu, o que cobrou e o que de fato 
 
 Ao iniciar novamente, a carga automática verifica se há dados e os preserva, sem duplicá-los. Para encerrar o ambiente mantendo os volumes, use `docker compose down`. Para iniciar somente o banco, sem executar a carga, use `docker compose up -d db`. Os parâmetros de simulação, reprodutibilidade e execução local estão no [guia da carga](seeds/README.md).
 
-Na etapa visual, o [ambiente Python](pyproject.toml) inclui pandas, Matplotlib e seaborn. O roteiro recomenda Power BI para o painel final e admite uma biblioteca gráfica em Python.
+Na etapa visual, use **Jupyter Notebook no VS Code** para as análises e **Streamlit** para o dashboard. O [ambiente Python](pyproject.toml) inclui o kernel Jupyter, Streamlit, pandas, Matplotlib e seaborn. Os notebooks estão configurados para executar a partir da raiz do projeto, sem repetir ajustes de `sys.path`. Siga o [guia do ambiente de análise](docs/06-ambiente-analise.md) para selecionar `.venv` e abrir o painel pela tarefa do VS Code.

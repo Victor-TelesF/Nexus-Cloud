@@ -2,6 +2,8 @@
 
 O comercial quer saber quando a procura mudou. O financeiro precisa distinguir dinheiro recebido de cobranças que ainda exigem acompanhamento. Os desafios 26–29 respondem a essas perguntas com gráficos. O 30 reúne as descobertas para a diretoria. Os enunciados completos estão no [catálogo](02-desafios-sql.md#d26).
 
+As análises serão feitas em **Jupyter Notebook no VS Code** e o painel em **Streamlit**. O [guia do ambiente de análise](06-ambiente-analise.md) explica a configuração dos caminhos e as tarefas para executar o projeto.
+
 ## As quatro análises
 
 | Pedido | Entrega | Como conferir |
@@ -11,11 +13,11 @@ O comercial quer saber quando a procura mudou. O financeiro precisa distinguir d
 | [28 · Perfil dos clientes](02-desafios-sql.md#d28) | Extração SQL e visualização que permita comparar o número de clientes e a receita da carteira **por estado e por setor econômico**. Identifique onde há concentração de clientes e onde há concentração de receita. | Confira se uma empresa com várias cobranças conta uma única vez no total da carteira e se uma empresa sem recebimentos continua representada na distribuição de clientes. |
 | [29 · Riscos financeiros](02-desafios-sql.md#d29) | Extração SQL e análise em Python/pandas com gráfico das cobranças atrasadas por cliente. Identifique onde se concentra o saldo em aberto e justifique prioridades de acompanhamento. | Concilie o saldo com as cobranças classificadas como atrasadas no relatório 14. Se exibir apenas uma parte dos clientes, informe a cobertura do recorte. |
 
-Em cada item, vincule no [checklist](03-progresso.md) a extração SQL, o arquivo de análise e o gráfico renderizado ou uma forma de abri-lo. Identifique período, unidade dos eixos e filtros relevantes. A escolha do tipo de gráfico em 27–29 cabe ao estudante.
+Em cada item, vincule no [checklist](03-progresso.md) a extração SQL, o notebook `.ipynb` em `notebooks/` e o gráfico renderizado ou uma forma de abri-lo. Identifique período, unidade dos eixos e filtros relevantes. A escolha do tipo de gráfico em 27–29 cabe ao estudante.
 
 ## 30 · Dashboard executivo
 
-Entregue o **painel em Power BI ou Python** e uma **breve apresentação das descobertas mais relevantes**. O painel deve permitir responder às sete perguntas abaixo. As referências indicam trabalhos de apoio. Confira seus resultados antes de reutilizá-los.
+Entregue o **painel em Python com Streamlit**, em `dashboards/`, e uma **breve apresentação das descobertas mais relevantes**. O painel deve permitir responder às sete perguntas abaixo. As referências indicam trabalhos de apoio. Confira seus resultados antes de reutilizá-los.
 
 | Indicador ou visual pedido | Pergunta que a diretoria deve conseguir responder | Referência para conferir |
 | --- | --- | --- |

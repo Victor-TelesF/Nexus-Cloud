@@ -166,6 +166,8 @@ Quais clientes geraram uma receita total superior à média de receita por clien
 
 ## Etapa 5 · Visualizações e dashboard (26–30)
 
+Use Jupyter Notebook no VS Code para as análises 26–29 e Python com Streamlit para o painel 30. Consulte a [configuração do ambiente](06-ambiente-analise.md).
+
 <a id="d26"></a>
 
 ### 26 · Diagnóstico comercial
@@ -204,4 +206,4 @@ Produza uma análise das cobranças atrasadas por cliente, identificando concent
 
 Entregue um dashboard com indicadores de clientes, contratos, receita recebida, cobranças atrasadas, evolução mensal, serviços mais contratados e receita por categoria. Prepare também uma breve apresentação das descobertas mais relevantes.
 
-**Ferramentas do roteiro** · Power BI ou Python
+**Ferramentas do projeto** · SQL + Python/Streamlit
