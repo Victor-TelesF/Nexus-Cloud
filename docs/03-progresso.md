@@ -54,11 +54,11 @@ Cada linha mostra o pedido, a situação da entrega, a evidência e o parecer.
 
 ### Etapa 4 · Análise avançada (20–25)
 
-- [ ] [20 · Evolução das contratações](02-desafios-sql.md#d20) · **Pendente** · [20.sql](../sql/analysis/analise_avancada/20.sql) (somente enunciado) · Sem revisão
-- [ ] [21 · Cancelamentos](02-desafios-sql.md#d21) · **Pendente** · [21.sql](../sql/analysis/analise_avancada/21.sql) (somente enunciado) · Sem revisão
-- [ ] [22 · Crescimento da receita](02-desafios-sql.md#d22) · **Pendente** · [22.sql](../sql/analysis/analise_avancada/22.sql) (somente enunciado) · Sem revisão
-- [ ] [23 · Desempenho por setor](02-desafios-sql.md#d23) · **Pendente** · [23.sql](../sql/analysis/analise_avancada/23.sql) (somente enunciado) · Sem revisão
-- [ ] [24 · Atraso nos pagamentos](02-desafios-sql.md#d24) · **Pendente** · [24.sql](../sql/analysis/analise_avancada/24.sql) (somente enunciado) · Sem revisão
+- [x] [20 · Evolução das contratações](02-desafios-sql.md#d20) · **Concluído** · [20.sql](../sql/analysis/analise_avancada/20.sql) · **Correta** — revisão de 10/11/2026; 36 meses observados, de novembro de 2023 a outubro de 2026
+- [x] [21 · Cancelamentos](02-desafios-sql.md#d21) · **Concluído** · [21.sql](../sql/analysis/analise_avancada/21.sql) · **Correta** — revisão de 10/11/2026; 816 de 5.000 contratos, 16,32%
+- [x] [22 · Crescimento da receita](02-desafios-sql.md#d22) · **Concluído** · [22.sql](../sql/analysis/analise_avancada/22.sql) · **Correta** — revisão de 10/11/2026; 36 meses consecutivos, valores e variações conferidos
+- [x] [23 · Desempenho por setor](02-desafios-sql.md#d23) · **Concluído** · [23.sql](../sql/analysis/analise_avancada/23.sql) · **Correta** — revisão de 11/11/2026; oito setores e valores conciliados com os recebimentos
+- [x] [24 · Atraso nos pagamentos](02-desafios-sql.md#d24) · **Concluído** · [24.sql](../sql/analysis/analise_avancada/24.sql) · **Correta** — revisão final de 11/11/2026; 7.107 pagamentos identificados e média conferida
 - [ ] [25 · Clientes acima da média](02-desafios-sql.md#d25) · **Pendente** · [25.sql](../sql/analysis/analise_avancada/25.sql) (somente enunciado) · Sem revisão
 
 ### Etapa 5 · Visualizações e dashboard (26–30)
@@ -72,6 +72,59 @@ Cada linha mostra o pedido, a situação da entrega, a evidência e o parecer.
 ## Histórico de revisões
 
 Acrescente uma entrada a cada revisão real. Inclua a versão ou o trecho examinado para preservar o histórico após uma correção.
+
+### Revisão final de 11/11/2026 · desafio 24
+
+- Evidência: [24.sql](../sql/analysis/analise_avancada/24.sql), SHA-256 iniciado por `a0a97146597f`, três consultas; enunciado, regra de negócio, modelo e rubrica examinados nesta sequência. Cada linha detalhada representa um pagamento realizado após o vencimento, identificado pelo ID e com seu atraso; a média abrange essa mesma população.
+- Parecer **Correta**, entrega **Concluído**: o detalhamento apresenta o ID do pagamento e o do contrato, além das datas e dos dias de atraso; a média não é mais arredondada a dias inteiros. A comparação exclui datas iguais e, conforme o modelo, cobranças em aberto não possuem data de pagamento. A contagem é uma consulta adicional. Agrupar pela chave primária preserva uma linha por pagamento; nesse caso o agrupamento não é necessário, pois não há agregação no detalhamento.
+- Método: execução das três consultas inspecionadas em transação local `REPEATABLE READ`, somente leitura, com limites de 10 segundos por instrução e 2 segundos de espera por bloqueio, encerrada com rollback. Conferência independente em Python dos registros individuais confirmou os 7.107 IDs, contratos, datas e atrasos, sem duplicação, e a soma de 189.538 dias. A média observada foi 26,6691993808920782 dias, coerente com a divisão independente. Consulta e dados preservados.
+- Ponto a investigar: nenhuma divergência identificada. Pergunta de compreensão: uma cobrança paga exatamente na data de vencimento deve aparecer entre os pagamentos feitos depois do vencimento?
+
+### Nova revisão de 11/11/2026 · desafio 24
+
+- Evidência: [24.sql](../sql/analysis/analise_avancada/24.sql), SHA-256 iniciado por `8837c0405c5b`, três consultas; enunciado e modelo relidos. A nova versão agrupa pelo ID, chave primária de pagamento, nas consultas detalhada e de média, mas não o apresenta na saída.
+- Parecer **Parcialmente correta**: o agrupamento mantém uma linha por pagamento, porém não permite ao leitor identificar qual pagamento é cada linha. A média continua arredondada a dias inteiros, apesar de o enunciado não exigir esse arredondamento. A seleção e o cálculo dos dias permanecem adequados; a entrega continua aberta.
+- Método: leitura e execução das três consultas em transação local `REPEATABLE READ`, somente leitura, com limites de 10 segundos por instrução e 2 segundos de espera por bloqueio, encerrada com rollback. Leitura independente dos pagamentos confirmou 7.107 registros elegíveis e todas as linhas detalhadas por datas e atraso; há 896 ocorrências além da primeira com as mesmas datas. A soma de 189.538 dias dividida por 7.107 resulta em aproximadamente 26,6692 dias; a consulta apresenta 27. SQL e dados preservados.
+- Pista: se dois pagamentos distintos tiverem as mesmas datas, olhando apenas as colunas retornadas, como distinguir as linhas? Aguardar nova tentativa.
+
+### Revisão de 11/11/2026 · desafio 24
+
+- Evidência: [24.sql](../sql/analysis/analise_avancada/24.sql), SHA-256 iniciado por `8b167bce8271`, três consultas e comentários; enunciado 24, regra de negócio, modelo e rubrica. Cada linha detalhada deve representar uma cobrança paga após o vencimento, com seu atraso em dias; a média deve representar o atraso dessas cobranças. Interpretação adotada: o enunciado não determina arredondamento para dias inteiros e o detalhamento deve permitir identificar cada pagamento.
+- Parecer **Parcialmente correta**: a comparação das datas seleciona pagamentos posteriores ao vencimento e a subtração produz dias de atraso. Pelo modelo, pagamentos em aberto têm data de pagamento nula. A média é arredondada a um inteiro, perdendo a parte fracionária; além disso, as datas exibidas não identificam unicamente uma cobrança. A contagem é diagnóstico adicional, não exigência do enunciado.
+- Método: as três consultas inspecionadas foram executadas em uma transação local `REPEATABLE READ`, somente leitura, com limites de 10 segundos por instrução e 2 segundos de espera por bloqueio, encerrada com rollback. Conferência independente em Python dos pagamentos individuais: 7.107 pagos após o vencimento, 189.538 dias somados e média de aproximadamente 26,6692 dias; a consulta mostra 27. As 7.107 linhas detalhadas coincidem com os registros em datas e atrasos, mas há 896 ocorrências além da primeira em pares de datas repetidos, impedindo sua identificação pela saída. Consulta e dados preservados.
+- Pista: se dois pagamentos atrasaram 1 e 2 dias, qual é a média deles? O resultado em dias inteiros preserva esse valor? Aguardar nova tentativa antes de aprofundar a orientação.
+
+### Revisão de 11/11/2026 · desafio 23
+
+- Evidência: [23.sql](../sql/analysis/analise_avancada/23.sql), linhas 5–11, SHA-256 iniciado por `275e4a7e858f`; enunciado 23, regra de receita recebida, modelo e rubrica. Hipótese: receita efetivamente recebida em todo o histórico, apresentando setores com recebimentos; uma linha por setor com o total em reais.
+- Parecer **Correta**, entrega **Concluído**: os vínculos seguem as chaves, as cobranças pagas são somadas por setor e a ordem é decrescente. Setores sem recebimentos não aparecem; todos os oito setores cadastrados tiveram recebimentos na base observada. O enunciado não exige explicitamente exibir setores com total zero.
+- Método: consulta inspecionada e executada em transação local `REPEATABLE READ`, somente leitura, com limites de 10 segundos por instrução e 2 segundos de espera por bloqueio, encerrada com rollback. Apuração independente em Python com `Decimal`, a partir de leituras separadas de clientes, contratos e cobranças, confirmou todos os oito totais e a ordem. As 23.988 cobranças pagas somam R$ 6.858.603,06; Tecnologia lidera com R$ 1.993.229,97. Dados e consulta preservados.
+- Ponto a investigar: `total` representa receita recebida, não todas as cobranças; um nome mais descritivo pode facilitar a leitura. Pista de compreensão: se um cliente de um setor tiver uma cobrança paga de R$ 100 e outra pendente de R$ 200, quanto esse cliente deve contribuir para o total recebido do setor?
+
+### Revisão da ordenação em 10/11/2026 · desafio 22
+
+- Parecer **Correta** para o histórico observado; entrega **Concluído**. [22.sql](../sql/analysis/analise_avancada/22.sql), SHA-256 iniciado por `123789e635e3`, agora ordena também a saída final por ano e mês. Cada linha representa um mês com recebimentos; a primeira variação é nula.
+- Método: execução da consulta e leitura dos pagamentos individuais na mesma transação somente leitura `REPEATABLE READ`, com limites de 10 segundos por instrução e 2 segundos de espera por bloqueio, seguida de rollback. Apuração independente com `Decimal` conferiu os 36 totais, as variações e a ordem; todos os meses de novembro de 2023 a outubro de 2026 estão presentes. Novembro de 2023 teve R$ 11.768,62; dezembro, R$ 15.112,41 e variação de 28,41%.
+- Limitação: a consulta não gera meses sem pagamentos; se houver lacuna, compara com o mês anteriormente observado, que pode não ser o mês calendário anterior. Isso não ocorreu no intervalo verificado. Pista de compreensão: se dois meses consecutivos tiverem o mesmo total recebido, qual deverá ser a variação do segundo?
+
+### Nova revisão de 10/11/2026 · desafio 22
+
+- Evidência: leitura e execução da nova versão de [22.sql](../sql/analysis/analise_avancada/22.sql), SHA-256 iniciado por `0b938c79dbdc`, em transação somente leitura com limites de 10 segundos por instrução e 2 segundos de espera por bloqueio, seguida de rollback. A primeira variação retornou nula; as 36 linhas observadas vão de novembro de 2023 a outubro de 2026, sem lacunas mensais nesse intervalo.
+- Parecer **Parcialmente correta**: a ausência de comparação agora é representada por valor nulo. A ordenação na consulta interna e na janela não garante a ordem da saída final, necessária para apresentar a evolução cronológica. A saída observada veio ordenada nesta execução, sem garantia para outras execuções. As somas e variações não foram conciliadas independentemente.
+- Hipótese: apresentar os meses com recebimentos. Caso existam lacunas, a linha anterior não necessariamente corresponde ao mês calendário anterior; esta base não exercitou esse caso no intervalo observado. Próxima verificação: como garantir a ordem das linhas apresentadas ao leitor? Aguardar nova tentativa.
+
+### Revisão de 10/11/2026 · desafio 22
+
+- Evidência: leitura e execução de [22.sql](../sql/analysis/analise_avancada/22.sql), SHA-256 iniciado por `f953d54a4a3f`, além do enunciado, da regra de receita recebida, do modelo e da rubrica. Cada linha deve representar um mês e sua receita recebida, com comparação ao mês anterior. Para meses sem recebimentos, a interpretação de uma série contínua deve ser explicitada; a consulta só produz meses com pagamentos.
+- Parecer **Parcialmente correta**: agrupa recebimentos pagos pela data efetiva e distingue ano e mês. O tratamento de comparação indisponível retorna 0% no primeiro mês, embora não exista mês anterior na série para sustentar essa taxa. Também não garante ordenação da saída final. Aguardar nova tentativa; investigar meses sem recebimentos conforme a hipótese adotada.
+- Execução local em transação somente leitura, com limites de 10 segundos por instrução e 2 segundos de espera por bloqueio, seguida de rollback. Foram observadas 36 linhas, de novembro de 2023 a outubro de 2026, sem lacunas entre esses meses; a primeira mostrou receita de R$ 11.768,62 e variação de 0%. A execução não constitui conciliação independente dos valores.
+- Pista: se o primeiro mês registra R$ 100 e não há informação sobre o mês anterior, é possível afirmar que a receita não variou? Que valor distinguiria ausência de comparação de crescimento zero?
+
+### Revisão de 10/11/2026 · desafios 20 e 21
+
+- Método: leitura dos enunciados, contexto de negócio, modelo, rubrica e arquivos, seguida de execução das consultas em sessão PostgreSQL somente leitura, com limite de instrução de 10 segundos e de espera por bloqueio de 2 segundos. Os arquivos do estudante foram preservados.
+- **20 — Correta.** [20.sql](../sql/analysis/analise_avancada/20.sql), SHA-256 iniciado por `4b733ae13682`: uma linha por ano e mês de início, com contagem de contratos e ordem cronológica. Resultado: 36 meses consecutivos observados, de novembro de 2023 a outubro de 2026; janeiro de 2024 tem 40 e janeiro de 2025 tem 73 contratos. Hipótese: exibir os meses em que houve contratações; se o relatório exigir também meses sem contratos, a consulta não os criaria, mas não há lacuna nesse intervalo observado. Teste: janeiro de anos diferentes deve formar uma linha ou duas?
+- **21 — Correta.** [21.sql](../sql/analysis/analise_avancada/21.sql), SHA-256 iniciado por `e84a1c7ea817`: uma linha para o conjunto de contratos, com quantidade cancelada e percentual sobre todos os status atuais. Resultado: 816 cancelados entre 5.000, ou 16,32%; contagem separada por status confirmou ainda 3.738 ativos e 446 suspensos. A divisão protegida retorna percentual nulo se não houver contratos. Teste: em dez contratos, dois cancelados representam qual percentual? O indicador não identifica quando houve cancelamento.
 
 | Data | ID | Evidência e método | Parecer e motivo | Próxima verificação |
 | --- | --- | --- | --- | --- |
