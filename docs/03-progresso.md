@@ -59,7 +59,7 @@ Cada linha mostra o pedido, a situação da entrega, a evidência e o parecer.
 - [x] [22 · Crescimento da receita](02-desafios-sql.md#d22) · **Concluído** · [22.sql](../sql/analysis/analise_avancada/22.sql) · **Correta** — revisão de 10/11/2026; 36 meses consecutivos, valores e variações conferidos
 - [x] [23 · Desempenho por setor](02-desafios-sql.md#d23) · **Concluído** · [23.sql](../sql/analysis/analise_avancada/23.sql) · **Correta** — revisão de 11/11/2026; oito setores e valores conciliados com os recebimentos
 - [x] [24 · Atraso nos pagamentos](02-desafios-sql.md#d24) · **Concluído** · [24.sql](../sql/analysis/analise_avancada/24.sql) · **Correta** — revisão final de 11/11/2026; 7.107 pagamentos identificados e média conferida
-- [ ] [25 · Clientes acima da média](02-desafios-sql.md#d25) · **Pendente** · [25.sql](../sql/analysis/analise_avancada/25.sql) (somente enunciado) · Sem revisão
+- [x] [25 · Clientes acima da média](02-desafios-sql.md#d25) · **Concluído** · [25.sql](../sql/analysis/analise_avancada/25.sql) · **Correta** — execução e conferência independente de 12/11/2026; 310 clientes acima da média
 
 ### Etapa 5 · Visualizações e dashboard (26–30)
 
@@ -72,6 +72,40 @@ Cada linha mostra o pedido, a situação da entrega, a evidência e o parecer.
 ## Histórico de revisões
 
 Acrescente uma entrada a cada revisão real. Inclua a versão ou o trecho examinado para preservar o histórico após uma correção.
+
+### Verificação do resultado de 12/11/2026 · desafio 25
+
+- Evidência: [25.sql](../sql/analysis/analise_avancada/25.sql), SHA-256 iniciado por `cac479509758`, enunciado, regra de receita recebida e modelo. Parecer **Correta**, entrega **Concluído**.
+- Método: execução da consulta inspecionada em transação local `REPEATABLE READ`, somente leitura, com limites de 10 segundos por instrução e 2 segundos de espera por bloqueio, encerrada com rollback. Apuração independente em Python a partir dos clientes e pagamentos recebidos, com comparação exata por cliente; IDs, nomes, receitas, ausência de duplicatas e ordem decrescente conferidos. SQL e dados preservados.
+- Resultado observado: 1.000 clientes, dos quais 190 sem recebimentos; 23.988 pagamentos recebidos somam R$ 6.858.603,06. A média é R$ 6.858,60306 por cliente. As 310 linhas retornadas coincidem com os clientes apurados independentemente acima desse valor; receitas retornadas de R$ 6.864,97 a R$ 95.071,66.
+- Teste de compreensão: se um cliente tiver receita exatamente igual à média, ele deve aparecer no relatório?
+
+### Nova revisão do arquivo de 12/11/2026 · desafio 25 (ID e ordenação)
+
+- Evidência: [25.sql](../sql/analysis/analise_avancada/25.sql), SHA-256 iniciado por `cac479509758`; enunciado, regras, modelo e rubrica examinados nesta sequência. Uma linha identifica um cliente cuja receita recebida supera a média de todos os cadastrados.
+- Parecer **Correta** por leitura: o ID distingue homônimos; clientes sem recebimentos entram na média com zero; a soma considera somente pagamentos recebidos e a comparação é estritamente superior. A ordenação decrescente organiza a saída. A troca para `AVG` também evita a divisão por zero da versão anterior quando não há clientes.
+- Método: leitura estática, sem execução ou conferência do resultado. SQL e dados preservados. Entrega **Respondido**, com caixa aberta até haver evidência do resultado conforme os critérios de encerramento.
+- Teste de compreensão: se um cliente tiver receita exatamente igual à média, ele deve aparecer no relatório?
+
+### Nova revisão do arquivo de 12/11/2026 · desafio 25
+
+- Evidência: [25.sql](../sql/analysis/analise_avancada/25.sql), SHA-256 iniciado por `1bd8dbde3ab8`; leitura do SQL e comparação com enunciado, regras, modelo e rubrica. Uma linha deve identificar um cliente cuja receita recebida total supera a média de todos os cadastrados.
+- Parecer **Parcialmente correta**: os `LEFT JOINs` preservam clientes sem recebimentos, o `CASE` soma somente valores recebidos e o agrupamento por ID produz uma receita por cliente; a média inclui valores zero e a comparação é estritamente superior. Contudo, a saída não exibe o ID, permitindo que clientes homônimos fiquem indistinguíveis. Se não houver nenhum cliente cadastrado, a divisão por `COUNT(*)` igual a zero gera erro; caso inferido do SQL, não observado na base.
+- Método: leitura estática, sem execução nem conferência do resultado. Arquivo SQL e dados preservados; entrega permanece aberta.
+- Pista: se duas empresas de mesmo nome tiverem receitas acima da média, como distinguir as linhas retornadas? Aguardar nova tentativa.
+
+### Nova revisão de 12/11/2026 · desafio 25
+
+- Evidência: tentativa enviada no chat, identificada pelo `WHERE NOT EXISTS` de pagamentos pagos por contrato combinado com `OR pagamento.status = 'pago'`; revisão por leitura, sem execução. A tentativa no chat foi avaliada separadamente das versões no arquivo.
+- Parecer **Parcialmente correta**: preserva clientes sem contrato e procura incluir contratos sem pagamentos recebidos. Porém, quando um contrato não tem pagamento pago, o `NOT EXISTS` também permite suas cobranças pendentes ou atrasadas, cujos valores entram na soma e alteram a receita e a média. A saída continua sem identificar clientes homônimos pelo ID. Entrega aberta; SQL e dados preservados.
+- Pista: para um contrato com uma cobrança pendente de R$ 50 e nenhuma paga, o `NOT EXISTS` é verdadeiro ou falso? Que valor dessa cobrança chega à soma? Aguardar nova tentativa.
+
+### Revisão de 12/11/2026 · desafio 25
+
+- Evidência: [25.sql](../sql/analysis/analise_avancada/25.sql), SHA-256 iniciado por `4e726476428f`, duas consultas e comentários; enunciado, regra de receita recebida, modelo e rubrica. Cada linha deve identificar um cliente cuja receita recebida total supera a média por cliente, calculada sobre todos os cadastrados, inclusive os de receita zero.
+- Parecer **Parcialmente correta**: a primeira versão soma recebimentos por identidade e compara com a média, mas as condições sobre pagamentos no `WHERE` eliminam clientes sem recebimento antes do cálculo, alterando a população da média. A segunda usa a mediana, que responde a outra pergunta, e apresenta a mesma exclusão. O modelo permite nomes de empresa repetidos; a saída sem ID pode deixar clientes indistinguíveis.
+- Método: leitura estática; consultas e dados preservados. Não houve execução ou conferência de resultados na base. A entrega permanece aberta, inclusive porque não há resultado verificado.
+- Pista: com três clientes, receitas de R$ 0, R$ 100 e R$ 200, quais clientes entram no cálculo da média e quais permanecem na etapa de resumo de cada versão? Aguardar nova tentativa.
 
 ### Revisão final de 11/11/2026 · desafio 24
 
