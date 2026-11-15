@@ -8,7 +8,7 @@
 --Tentativa de exploração
 SELECT 
     EXTRACT(YEAR FROM p.data_pagamento) AS Ano,
-    TO_CHAR(DATE_TRUNC('month', p.data_pagamento), 'TMMonth') AS Mes,
+    EXTRACT(MONTH FROM p.data_pagamento) AS mes,
     SUM(p.valor) AS "Faturamento Total",
     SUM(s.custo_mensal) AS "Custo Estimado",
     (SUM(p.valor) - SUM(s.custo_mensal)) AS "Margem Finançeira"
@@ -19,10 +19,10 @@ WHERE c.status = 'ativo'
     AND EXTRACT(YEAR FROM p.data_pagamento) = 2026
 GROUP BY 
     EXTRACT(YEAR FROM p.data_pagamento),
-    DATE_TRUNC('month', p.data_pagamento)
+    EXTRACT(MONTH FROM p.data_pagamento)
 ORDER BY 
     Ano,
-    DATE_TRUNC('month', p.data_pagamento);
+    EXTRACT(MONTH FROM p.data_pagamento);
 
 
 --Resposta correta
