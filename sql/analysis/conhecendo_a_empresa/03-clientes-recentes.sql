@@ -5,5 +5,4 @@
 SELECT nome_empresa, setor, cidade, data_cadastro 
 FROM nexus.clientes
 WHERE data_cadastro >=  CURRENT_DATE - INTERVAL '90 days'
-ORDER BY data_cadastro DESC
-LIMIT 20;
+ORDER BY data_cadastro, id DESC;
