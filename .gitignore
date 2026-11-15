@@ -18,4 +18,5 @@ postgres_data/
 
 # Notebook checkpoints and local Streamlit credentials
 .ipynb_checkpoints/
+/notebooks/pratica-pandas-inicial.ipynb
 .streamlit/secrets.toml
