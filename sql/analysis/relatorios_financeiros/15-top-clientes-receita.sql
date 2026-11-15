@@ -6,7 +6,7 @@
 
 SELECT c.nome_empresa AS Cliente, ROUND(
     (SUM(p.valor) / SUM(SUM(p.valor)) OVER()) * 100, 2
-) || '%' AS "Percentual de contribuição"
+) AS percentual_contribuicao
 FROM nexus.clientes c
 JOIN nexus.contratos a ON a.id_cliente = c.id
 JOIN nexus.pagamentos p ON a.id = p.id_contrato
@@ -19,8 +19,8 @@ LIMIT 10;
 
 SELECT 
     c.nome_empresa, 
-    SUM(p.valor) AS valor_somado_cliente,
-    ROUND((SUM(p.valor) / SUM(SUM(p.valor)) OVER ()) * 100, 4) AS "Porcentagem"
+    SUM(p.valor) AS valor_total,
+    ROUND((SUM(p.valor) / SUM(SUM(p.valor)) OVER ()) * 100, 4) AS percentual
 FROM nexus.clientes c
 JOIN nexus.contratos a ON a.id_cliente = c.id
 JOIN nexus.pagamentos p ON a.id = p.id_contrato
