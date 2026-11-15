@@ -63,11 +63,11 @@ Cada linha mostra o pedido, a situação da entrega, a evidência e o parecer.
 
 ### Etapa 5 · Visualizações e dashboard (26–30)
 
-- [ ] [26 · Diagnóstico comercial](02-desafios-sql.md#d26) · **Pendente** · [26.sql](../sql/analysis/visualizacoes_e_dashboard/26.sql) (somente enunciado) · Sem revisão
-- [ ] [27 · Análise de receita](02-desafios-sql.md#d27) · **Pendente** · [27.sql](../sql/analysis/visualizacoes_e_dashboard/27.sql) (somente enunciado) · Sem revisão
-- [ ] [28 · Perfil dos clientes](02-desafios-sql.md#d28) · **Pendente** · [28.sql](../sql/analysis/visualizacoes_e_dashboard/28.sql) (somente enunciado) · Sem revisão
-- [ ] [29 · Riscos financeiros](02-desafios-sql.md#d29) · **Pendente** · [29.sql](../sql/analysis/visualizacoes_e_dashboard/29.sql) (somente enunciado) · Sem revisão
-- [ ] [30 · Dashboard executivo](02-desafios-sql.md#d30) · **Pendente** · [30.sql](../sql/analysis/visualizacoes_e_dashboard/30.sql) (somente enunciado) · Sem revisão
+- [ ] [26 · Diagnóstico comercial](02-desafios-sql.md#d26) · **Em andamento** · [Notebook](../notebooks/26-diagnostico-comercial.ipynb) com análise e gráfico · Sem revisão
+- [ ] [27 · Análise de receita](02-desafios-sql.md#d27) · **Em andamento** · [Notebook](../notebooks/27-mix-receita-categorias.ipynb) com análises e gráficos · Sem revisão
+- [ ] [28 · Perfil dos clientes](02-desafios-sql.md#d28) · **Pendente** · [Notebook](../notebooks/28-segmentacao-carteira.ipynb) (somente enunciado) · Sem revisão
+- [ ] [29 · Riscos financeiros](02-desafios-sql.md#d29) · **Pendente** · [Notebook](../notebooks/29-monitoramento-risco.ipynb) (somente enunciado) · Sem revisão
+- [ ] [30 · Dashboard executivo](02-desafios-sql.md#d30) · **Pendente** · [Aplicação](../dashboards/app.py) (estrutura inicial) · Sem revisão
 
 ## Histórico de revisões
 
