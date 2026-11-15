@@ -1,0 +1,661 @@
+nome_empresa,cobranças_atrasadas,valor_total
+Casa de Materiais Aroeira do Norte,100,23659.53
+Ipê Sistemas da Serra,91,21684.28
+Solar Sistemas das Palmeiras,90,28615.60
+Harmonia Consultoria Financeira,88,21631.80
+Alvorada Consultoria Financeira do Litoral,51,12629.19
+Horizonte Sistemas do Norte,51,10086.51
+Têxtil Pontal,48,12415.04
+Boa Vista Tecnologia do Cerrado,46,14138.51
+Alvorada Logística,43,12045.10
+Travessia Sistemas do Sul,40,7074.83
+Empório Jatobá do Sol,40,9928.04
+Raízes Transportes da Colina,39,8831.54
+Clínica Aurora,38,6246.70
+Centro Educacional Horizonte do Litoral,37,13493.14
+Empório Jatobá da Praça,34,8327.04
+Essência Entregas da Lagoa,33,7484.92
+Aurora Tecnologia do Bosque,33,3957.93
+Alimentos Vértice,32,7135.46
+Paineira Soluções Digitais do Lago,31,4772.20
+Mandacaru Software,30,6845.08
+Travessia Consultoria em TI da Serra,29,10380.12
+Comercial Essência,28,16579.02
+Mercado Caminhos do Cerrado,28,4770.18
+Nascente Consultoria Financeira do Sol,27,5092.06
+Horizonte Sistemas do Sol,27,3809.47
+Têxtil Orion da Colina,27,5550.81
+Essência Manutenção,27,5951.01
+Comercial Harmonia,26,7040.94
+Essência Consultoria em TI do Norte,25,1919.32
+Comercial Ipê do Vale,25,7976.08
+Farmácia Aroeira da Praça,25,3785.94
+Prisma Arquitetura da Vila,24,8085.44
+Centro Médico Essência do Sol,23,3788.16
+Alvorada Crédito,23,4219.51
+Alvorada Manutenção do Campo,23,8491.48
+Comercial Candeia,22,7250.53
+Ipê Soluções Digitais,22,6847.63
+Metalúrgica Harmonia,22,4938.90
+Íris Software do Lago,22,4436.90
+Jacarandá Logística,21,4522.59
+Comercial Caminhos do Bosque,21,8671.59
+Jatobá Consultoria em TI do Bosque,21,7512.69
+Atacado Ipê,20,2353.27
+Casa de Materiais Orion do Sul,20,11673.24
+Instituto de Ensino Orion do Litoral,20,13316.09
+Raízes Crédito,20,5838.09
+Clínica Caminhos da Lagoa,20,13517.97
+Canela Software,19,4266.98
+Comercial Vértice dos Jardins,19,7348.77
+Acácia Engenharia,19,3851.11
+Pontal Engenharia do Cerrado,19,2561.38
+Sereno Consultoria em TI do Lago,19,17484.51
+Canela Sistemas do Litoral,19,1370.29
+Casa de Materiais Pontal do Bosque,18,3605.61
+Horizonte Transportes do Lago,18,6452.50
+Comercial Aurora,18,4627.24
+Clínica Boa Vista do Campo,18,12303.31
+Harmonia Engenharia da Vila,18,3155.32
+Orion Sistemas,18,7660.30
+Mercado Caminhos da Colina,18,2531.85
+Sabiá Arquitetura do Cerrado,18,2475.75
+Alvorada Soluções Digitais,17,3124.24
+Acácia Tecnologia,17,5125.81
+Aroeira Consultoria da Praça,17,5593.78
+Centro Educacional Ipê,17,5734.35
+Nascente Tecnologia do Litoral,17,2897.25
+Centro Educacional Aurora,17,4261.55
+Canela Tecnologia dos Jardins,16,10858.73
+Cedro Manutenção dos Jardins,16,4594.84
+Candeia Consultoria em TI do Cerrado,16,4019.23
+Casa de Materiais Solar das Palmeiras,16,5021.23
+Cursos Harmonia da Lagoa,15,2843.94
+Cursos Sabiá do Norte,15,8944.27
+Clínica Acácia da Colina,15,8529.19
+Atlântico Engenharia,15,2032.09
+Atacado Sereno da Praça,15,4401.63
+Vértice Contabilidade,14,1475.29
+Embalagens Orion,14,1799.66
+Instituto de Ensino Mandacaru do Litoral,14,1944.35
+Paineira Soluções Digitais do Sol,14,3124.50
+Embalagens Ipê da Colina,14,3596.36
+Acácia Armazéns,14,2128.51
+Farmácia Essência,14,1331.23
+Sabiá Contabilidade,13,3825.82
+Indústria Alvorada,13,2899.27
+Instituto de Ensino Jacarandá,13,16969.65
+Alimentos Jacarandá do Litoral,13,3926.34
+Paineira Consultoria em TI,13,3738.69
+Clínica Nascente,13,2838.16
+Colégio Cedro do Norte,13,7853.11
+Nascente Manutenção,13,1128.23
+Distribuidora Caminhos,13,3398.10
+Indústria Mandacaru do Campo,13,4241.12
+Mandacaru Assessoria Financeira da Lagoa,13,3260.15
+Caminhos Soluções Digitais da Praça,13,4871.47
+Comercial Acácia do Lago,13,2972.26
+Caminhos Software,13,3376.80
+Empório Nascente da Serra,13,5291.58
+Têxtil Ipê,12,2746.10
+Canela Consultoria do Cerrado,12,5242.84
+Empório Pontal do Cerrado,12,3264.44
+Mercado Aroeira,12,586.35
+Nascente Transportes,12,1895.01
+Escola Solar,12,3570.51
+Aurora Sistemas do Vale,12,3537.40
+Móveis Essência,12,1831.98
+Odontologia Vértice do Campo,12,1948.68
+Odontologia Solar,12,3868.43
+Centro Médico Atlântico da Serra,12,1273.87
+Travessia Sistemas do Litoral,12,1422.38
+Casa de Materiais Canela,12,1628.83
+Metalúrgica Harmonia da Vila,12,687.14
+Centro Médico Aurora,11,1614.03
+Mercado Orion,11,4120.77
+Têxtil Atlântico,11,4449.76
+Móveis Veredas da Praça,11,2617.18
+Vértice Software,11,2341.81
+Essência Tecnologia,11,3627.12
+Essência Cargas do Vale,11,3244.28
+Nascente Tecnologia do Cerrado,11,3486.64
+Orion Arquitetura,11,1876.35
+Clínica Essência,11,5205.85
+Pontal Gestão,11,6792.70
+Cursos Sabiá,11,4741.69
+Aroeira Logística da Serra,11,1717.99
+Mandacaru Sistemas do Lago,11,3643.04
+Cedro Soluções Digitais,11,1431.90
+Laboratório Acácia do Campo,11,2485.88
+Íris Soluções Digitais do Campo,11,1676.55
+Indústria Candeia,10,753.66
+Instituto de Ensino Cedro das Palmeiras,10,1146.46
+Solar Software,10,1846.64
+Alvorada Consultoria em TI do Campo,10,2329.90
+Centro Médico Travessia da Praça,10,2423.99
+Boa Vista Gestão do Norte,10,2512.33
+Harmonia Soluções Digitais da Serra,10,3258.83
+Aroeira Gestão Financeira,10,1946.77
+Farmácia Pontal,10,2591.99
+Raízes Arquitetura da Vila,10,992.42
+Comercial Sabiá,10,2779.55
+Farmácia Canela da Serra,10,2761.60
+Clínica Cedro,10,1123.33
+Cursos Jatobá,10,1449.34
+Casa de Materiais Travessia do Sul,10,1379.37
+Laboratório Paineira da Colina,10,842.23
+Essência Consultoria do Campo,9,1859.16
+Instituto de Ensino Acácia do Norte,9,937.90
+Laboratório Atlântico do Lago,9,3077.87
+Jatobá Consultoria em TI das Palmeiras,9,1234.98
+Paineira Manutenção,9,4437.09
+Empório Sabiá da Serra,9,1943.25
+Jatobá Arquitetura,9,3458.78
+Travessia Gestão do Cerrado,9,1589.45
+Horizonte Software do Norte,9,2102.46
+Candeia Soluções Digitais da Lagoa,9,2512.40
+Indústria Candeia do Campo,9,10669.51
+Empório Atlântico,9,1406.77
+Instituto de Ensino Candeia da Serra,9,2422.53
+Cursos Atlântico do Norte,9,2809.14
+Laboratório Candeia da Lagoa,9,1570.23
+Laboratório Aroeira do Litoral,9,1571.67
+Distribuidora Jacarandá do Bosque,9,597.76
+Paineira Software da Praça,9,1550.78
+Clínica Jacarandá da Serra,9,2301.46
+Prisma Soluções Digitais da Vila,9,1645.64
+Canela Sistemas dos Jardins,9,1445.72
+Solar Tecnologia do Campo,9,4488.33
+Odontologia Orion das Palmeiras,9,1180.78
+Boa Vista Soluções Digitais do Campo,8,1336.57
+Harmonia Software,8,1235.88
+Mercado Orion da Serra,8,995.44
+Veredas Gestão Financeira,8,1055.94
+Odontologia Atlântico,8,1384.92
+Farmácia Atlântico da Praça,8,5925.19
+Íris Software,8,909.92
+Atacado Nascente do Norte,8,2624.77
+Orion Assessoria Financeira do Sol,8,3916.37
+Casa de Materiais Harmonia dos Jardins,8,956.89
+Íris Manutenção,8,4621.90
+Cedro Gestão Financeira,8,806.53
+Farmácia Caminhos,8,1813.45
+Distribuidora Solar,8,969.09
+Comercial Travessia,7,1500.96
+Atacado Sereno do Sol,7,1577.98
+Alvorada Gestão Financeira do Sol,7,1561.25
+Ipê Sistemas da Praça,7,1129.84
+Sabiá Assessoria Financeira,7,1332.18
+Caminhos Consultoria em TI da Vila,7,15404.41
+Caminhos Cargas da Vila,7,945.35
+Mercado Sereno do Lago,7,1405.22
+Veredas Sistemas do Litoral,7,1623.52
+Laboratório Harmonia da Serra,7,7541.21
+Candeia Tecnologia do Lago,7,911.87
+Atlântico Consultoria em TI,7,2944.64
+Vértice Consultoria em TI da Colina,7,2679.00
+Caminhos Consultoria em TI,7,1071.50
+Farmácia Prisma,7,720.63
+Atacado Candeia do Vale,7,1201.34
+Vértice Soluções Digitais,7,855.23
+Travessia Contabilidade do Campo,7,2489.80
+Jatobá Contabilidade do Norte,7,747.70
+Têxtil Horizonte,7,864.94
+Escola Jacarandá da Serra,7,5090.74
+Canela Sistemas,7,1241.99
+Centro Médico Vértice,7,7231.69
+Atacado Íris do Bosque,7,1347.35
+Cursos Sabiá do Litoral,7,1301.73
+Escola Mandacaru da Serra,7,1573.80
+Atacado Horizonte dos Jardins,6,751.24
+Laboratório Canela,6,998.44
+Aurora Gestão Financeira do Lago,6,2878.46
+Paineira Tecnologia,6,1120.37
+Centro Médico Essência do Litoral,6,3304.88
+Instituto de Ensino Mandacaru do Norte,6,3804.97
+Aroeira Consultoria em TI dos Jardins,6,1846.42
+Centro Médico Pontal do Litoral,6,1996.79
+Orion Entregas dos Jardins,6,1886.37
+Horizonte Manutenção do Sul,6,2186.75
+Distribuidora Sereno do Norte,6,2506.70
+Atlântico Crédito do Sol,6,1026.57
+Instituto de Ensino Sereno do Lago,6,630.82
+Cursos Veredas,6,1376.01
+Candeia Gestão,6,2111.99
+Distribuidora Aurora das Palmeiras,6,1403.70
+Distribuidora Atlântico do Sol,6,993.30
+Odontologia Vértice da Praça,6,3439.66
+Comercial Horizonte do Sol,6,1977.72
+Instituto de Ensino Essência do Campo,6,1779.79
+Orion Manutenção do Campo,6,1600.69
+Sabiá Tecnologia,6,1895.13
+Centro Educacional Caminhos,6,2159.64
+Alvorada Consultoria Financeira do Vale,6,1478.48
+Horizonte Cargas da Praça,6,665.30
+Embalagens Solar da Praça,6,1372.92
+Canela Contabilidade,6,4154.97
+Prisma Consultoria Financeira dos Jardins,6,1933.55
+Canela Arquitetura do Cerrado,6,1158.94
+Casa de Materiais Raízes das Palmeiras,6,1598.79
+Travessia Consultoria,6,1302.12
+Jatobá Sistemas do Lago,6,3632.38
+Aroeira Sistemas,6,181.48
+Empório Sereno do Sul,6,1400.00
+Aroeira Assessoria Financeira,6,330.72
+Centro Educacional Sabiá da Praça,6,957.23
+Empório Caminhos do Sul,6,5329.92
+Caminhos Consultoria Financeira do Campo,5,1024.95
+Casa de Materiais Nascente da Serra,5,1379.10
+Indústria Pontal da Lagoa,5,5358.37
+Acácia Consultoria em TI do Campo,5,6356.91
+Acácia Software da Lagoa,5,9636.45
+Prisma Engenharia do Bosque,5,1067.06
+Travessia Software do Cerrado,5,615.80
+Aurora Crédito,5,1153.90
+Raízes Crédito da Colina,5,356.80
+Centro Médico Nascente,5,1478.11
+Vértice Armazéns,5,4205.40
+Jatobá Sistemas,5,3601.73
+Laboratório Essência,5,1428.54
+Casa de Materiais Jatobá do Lago,5,1421.44
+Alimentos Paineira,5,459.70
+Sabiá Gestão Financeira,5,713.17
+Comercial Raízes da Praça,5,595.51
+Íris Crédito,5,2807.23
+Solar Tecnologia da Vila,5,980.15
+Sabiá Gestão Financeira das Palmeiras,5,657.01
+Comercial Nascente do Bosque,5,684.06
+Têxtil Aurora,5,126.00
+Sabiá Sistemas do Lago,5,708.91
+Laboratório Boa Vista do Cerrado,5,1244.22
+Vértice Gestão da Praça,5,322.39
+Boa Vista Crédito da Praça,5,673.80
+Centro Educacional Jatobá da Serra,5,1217.10
+Vértice Contabilidade do Bosque,5,550.10
+Prisma Manutenção dos Jardins,5,1133.25
+Jacarandá Engenharia,5,472.47
+Pontal Contabilidade do Campo,5,2090.28
+Atlântico Tecnologia da Vila,5,838.67
+Paineira Engenharia dos Jardins,5,1481.78
+Mandacaru Sistemas da Lagoa,5,492.20
+Atlântico Soluções Digitais do Bosque,5,3033.53
+Embalagens Alvorada dos Jardins,5,2245.53
+Aurora Tecnologia do Sul,5,321.69
+Paineira Soluções Digitais da Colina,5,1523.23
+Distribuidora Cedro da Praça,5,3225.88
+Clínica Pontal do Bosque,5,2768.50
+Candeia Soluções Digitais do Bosque,5,451.85
+Cursos Essência,5,1068.83
+Pontal Sistemas da Vila,5,829.54
+Orion Consultoria em TI do Sul,5,742.74
+Casa de Materiais Vértice,5,481.46
+Boa Vista Soluções Digitais da Praça,5,530.32
+Empório Travessia do Cerrado,5,1393.31
+Alimentos Atlântico,5,1142.53
+Caminhos Consultoria em TI do Sol,5,616.75
+Cursos Veredas do Lago,5,1968.61
+Nascente Software,5,2099.35
+Móveis Acácia da Vila,5,401.10
+Comercial Canela,5,1614.96
+Veredas Engenharia,5,344.67
+Sereno Contabilidade da Lagoa,5,871.19
+Boa Vista Software do Sol,5,2007.68
+Raízes Sistemas,5,386.24
+Travessia Cargas,4,3803.14
+Sabiá Tecnologia dos Jardins,4,544.01
+Mercado Candeia do Lago,4,1837.60
+Candeia Sistemas da Lagoa,4,1222.58
+Odontologia Prisma das Palmeiras,4,565.71
+Orion Soluções Digitais da Vila,4,464.00
+Casa de Materiais Aroeira da Lagoa,4,343.36
+Casa de Materiais Essência da Serra,4,1169.19
+Solar Entregas do Vale,4,1254.98
+Centro Educacional Alvorada,4,570.70
+Odontologia Nascente da Colina,4,1038.84
+Mercado Boa Vista da Serra,4,975.60
+Travessia Consultoria dos Jardins,4,604.31
+Distribuidora Mandacaru das Palmeiras,4,447.96
+Casa de Materiais Paineira da Vila,4,618.23
+Veredas Contabilidade das Palmeiras,4,324.01
+Atacado Sereno,4,398.18
+Íris Consultoria em TI da Praça,4,1462.10
+Odontologia Sereno do Campo,4,1186.66
+Centro Médico Prisma do Sul,4,226.61
+Móveis Ipê do Lago,4,278.06
+Orion Soluções Digitais da Colina,4,869.87
+Centro Médico Acácia,4,1208.61
+Cedro Arquitetura,4,402.58
+Prisma Sistemas,4,255.33
+Alvorada Consultoria em TI dos Jardins,4,573.06
+Comercial Harmonia do Sul,4,478.07
+Mercado Acácia,4,278.11
+Horizonte Crédito do Norte,4,613.19
+Veredas Crédito dos Jardins,4,732.62
+Mandacaru Tecnologia,4,5594.92
+Centro Educacional Sabiá,4,1029.18
+Escola Canela,4,327.84
+Ipê Soluções Digitais da Lagoa,4,1531.00
+Raízes Manutenção,4,439.36
+Candeia Assessoria Financeira da Serra,4,551.65
+Empório Boa Vista do Bosque,4,3290.57
+Indústria Íris do Cerrado,4,606.59
+Indústria Prisma do Cerrado,4,1730.56
+Colégio Nascente,4,414.15
+Mandacaru Arquitetura,4,614.08
+Aroeira Entregas da Colina,4,970.61
+Atacado Acácia do Cerrado,4,284.55
+Cursos Alvorada,4,1961.89
+Essência Soluções Digitais do Norte,4,3112.99
+Comercial Boa Vista da Vila,4,573.67
+Empório Prisma do Litoral,4,746.85
+Comercial Raízes do Litoral,4,184.74
+Têxtil Paineira da Serra,4,2546.69
+Acácia Manutenção do Sul,4,335.70
+Veredas Soluções Digitais da Vila,4,110.58
+Têxtil Boa Vista,4,117.33
+Centro Médico Jatobá da Lagoa,3,1179.72
+Comercial Pontal do Bosque,3,2126.64
+Aurora Tecnologia,3,196.02
+Distribuidora Caminhos do Lago,3,2238.51
+Clínica Solar do Norte,3,548.02
+Comercial Íris da Vila,3,1034.30
+Distribuidora Sereno dos Jardins,3,468.27
+Comercial Veredas,3,192.82
+Horizonte Consultoria em TI do Litoral,3,1110.52
+Clínica Acácia do Vale,3,456.53
+Embalagens Jacarandá do Litoral,3,369.72
+Vértice Consultoria Financeira,3,808.61
+Escola Essência da Praça,3,954.07
+Veredas Sistemas,3,95.41
+Jacarandá Software,3,1619.27
+Mercado Canela da Vila,3,468.02
+Comercial Orion do Campo,3,346.38
+Centro Educacional Candeia do Bosque,3,87.83
+Caminhos Sistemas,3,608.84
+Cursos Horizonte do Norte,3,1277.99
+Solar Gestão Financeira do Bosque,3,447.86
+Escola Boa Vista do Lago,3,1593.62
+Indústria Essência,3,362.42
+Nascente Tecnologia do Vale,3,466.78
+Nascente Sistemas da Praça,3,196.75
+Jacarandá Engenharia da Colina,3,306.64
+Distribuidora Travessia,3,843.28
+Raízes Tecnologia dos Jardins,3,1421.79
+Centro Médico Paineira do Lago,3,394.60
+Metalúrgica Acácia,3,1015.58
+Paineira Sistemas,3,1001.03
+Instituto de Ensino Sabiá do Vale,3,3844.32
+Aurora Manutenção do Litoral,3,268.61
+Canela Consultoria em TI da Vila,3,535.64
+Alimentos Alvorada,3,2060.95
+Comercial Sereno dos Jardins,3,588.62
+Centro Médico Aroeira do Bosque,3,415.37
+Pontal Transportes da Lagoa,3,341.10
+Boa Vista Contabilidade do Bosque,3,1262.33
+Alimentos Atlântico do Sol,3,2119.14
+Aroeira Software do Norte,3,350.69
+Móveis Ipê do Norte,3,699.30
+Essência Tecnologia das Palmeiras,3,1042.56
+Empório Aurora,3,371.20
+Essência Software do Litoral,3,450.75
+Laboratório Caminhos,3,668.34
+Travessia Consultoria Financeira do Bosque,3,1034.71
+Laboratório Veredas do Cerrado,3,408.81
+Empório Boa Vista do Lago,3,1068.44
+Centro Educacional Horizonte,3,183.93
+Raízes Software do Sol,3,593.35
+Escola Harmonia do Lago,3,368.78
+Escola Paineira do Litoral,3,183.06
+Sereno Entregas do Sul,3,648.59
+Jacarandá Cargas,3,336.12
+Candeia Consultoria em TI,3,708.51
+Laboratório Solar da Lagoa,3,2444.10
+Atacado Mandacaru,3,201.53
+Candeia Software,3,444.83
+Clínica Cedro da Praça,3,478.57
+Nascente Gestão do Lago,3,976.33
+Empório Mandacaru,3,757.71
+Indústria Aroeira da Colina,3,359.37
+Veredas Soluções Digitais da Colina,3,469.44
+Comercial Atlântico do Campo,3,569.65
+Atlântico Cargas da Praça,3,367.35
+Laboratório Jacarandá,3,499.56
+Mercado Cedro,3,415.65
+Centro Médico Ipê do Campo,3,1583.33
+Farmácia Solar do Sul,3,3907.98
+Íris Soluções Digitais,3,647.31
+Jatobá Contabilidade,3,900.33
+Distribuidora Essência do Vale,3,608.50
+Solar Tecnologia,3,911.88
+Prisma Engenharia,3,283.15
+Centro Educacional Essência do Sol,3,406.27
+Cursos Orion do Sul,3,165.74
+Laboratório Boa Vista do Sul,3,279.88
+Clínica Horizonte do Vale,3,606.98
+Vértice Tecnologia da Colina,3,367.30
+Mercado Íris da Vila,3,1359.30
+Alimentos Essência do Bosque,3,355.90
+Móveis Boa Vista do Campo,3,2245.85
+Comercial Cedro,3,724.22
+Atacado Horizonte do Campo,3,865.08
+Clínica Horizonte do Cerrado,3,1625.07
+Jatobá Entregas da Serra,3,250.02
+Metalúrgica Sereno da Praça,2,484.83
+Canela Consultoria Financeira,2,99.80
+Sabiá Consultoria,2,89.33
+Distribuidora Atlântico da Praça,2,3023.02
+Casa de Materiais Jacarandá do Campo,2,777.00
+Orion Gestão do Sul,2,1262.92
+Boa Vista Consultoria em TI da Praça,2,733.66
+Acácia Transportes,2,362.09
+Mercado Canela dos Jardins,2,323.42
+Prisma Arquitetura,2,886.19
+Escola Horizonte do Vale,2,618.90
+Cedro Tecnologia do Sol,2,206.10
+Essência Software do Bosque,2,644.49
+Prisma Entregas da Colina,2,127.63
+Paineira Manutenção do Sul,2,219.46
+Solar Tecnologia do Sol,2,360.71
+Aurora Soluções Digitais,2,158.08
+Veredas Contabilidade,2,257.49
+Centro Educacional Solar,2,136.69
+Solar Sistemas da Praça,2,263.95
+Veredas Assessoria Financeira dos Jardins,2,658.39
+Aroeira Consultoria em TI,2,2339.18
+Orion Consultoria em TI,2,738.86
+Travessia Cargas do Vale,2,97.79
+Atlântico Assessoria Financeira das Palmeiras,2,365.84
+Boa Vista Tecnologia,2,202.99
+Comercial Boa Vista,2,477.82
+Móveis Raízes,2,299.46
+Alimentos Pontal,2,614.39
+Têxtil Jatobá,2,705.68
+Jatobá Tecnologia do Sol,2,464.09
+Boa Vista Software da Lagoa,2,431.61
+Colégio Travessia do Vale,2,136.68
+Embalagens Jatobá do Lago,2,429.76
+Nascente Sistemas,2,132.17
+Cedro Arquitetura das Palmeiras,2,399.96
+Raízes Software do Vale,2,1406.77
+Têxtil Candeia da Lagoa,2,291.14
+Paineira Soluções Digitais,2,3341.14
+Centro Educacional Veredas,2,144.19
+Farmácia Candeia do Cerrado,2,178.85
+Candeia Tecnologia do Bosque,2,53.93
+Caminhos Software do Cerrado,2,175.52
+Escola Sereno da Colina,2,636.39
+Escola Aurora do Litoral,2,146.99
+Atacado Sabiá das Palmeiras,2,156.82
+Centro Educacional Travessia,2,58.26
+Orion Consultoria Financeira,2,291.68
+Odontologia Sereno do Lago,2,51.14
+Casa de Materiais Travessia,2,50.60
+Candeia Sistemas do Campo,2,609.73
+Solar Software da Praça,2,392.13
+Vértice Tecnologia do Campo,2,94.13
+Veredas Software,2,58.01
+Mercado Ipê do Bosque,2,996.80
+Acácia Soluções Digitais do Norte,2,55.07
+Alimentos Jacarandá,2,271.14
+Casa de Materiais Solar,2,401.62
+Boa Vista Manutenção do Campo,2,217.13
+Instituto de Ensino Prisma,2,204.66
+Alimentos Prisma,2,285.25
+Jacarandá Consultoria em TI do Vale,2,200.93
+Centro Educacional Acácia,2,1053.32
+Mercado Veredas da Lagoa,2,366.48
+Acácia Soluções Digitais,2,284.10
+Ipê Sistemas da Colina,2,968.41
+Distribuidora Sabiá da Lagoa,2,348.10
+Têxtil Harmonia,2,570.68
+Instituto de Ensino Atlântico da Vila,2,1570.64
+Boa Vista Software do Bosque,2,1696.12
+Cursos Travessia,2,297.76
+Acácia Tecnologia da Praça,2,61.85
+Canela Arquitetura,2,256.13
+Acácia Cargas,2,287.40
+Móveis Orion,2,207.63
+Comercial Acácia do Vale,2,881.30
+Harmonia Tecnologia das Palmeiras,2,230.30
+Odontologia Boa Vista,2,348.31
+Casa de Materiais Jacarandá do Sul,2,459.18
+Nascente Arquitetura do Vale,2,252.24
+Jacarandá Crédito,2,868.83
+Nascente Consultoria do Norte,2,3373.30
+Odontologia Boa Vista do Norte,2,267.59
+Escola Jacarandá,2,428.79
+Mandacaru Sistemas da Colina,2,101.79
+Atacado Paineira do Vale,2,49.54
+Casa de Materiais Essência do Vale,2,572.01
+Prisma Contabilidade da Serra,2,202.71
+Empório Pontal,2,213.70
+Mercado Atlântico,2,645.48
+Laboratório Sabiá dos Jardins,2,630.10
+Mercado Jatobá,2,732.44
+Aurora Assessoria Financeira,2,52.67
+Candeia Sistemas,2,576.12
+Distribuidora Essência da Serra,2,312.02
+Pontal Consultoria em TI do Norte,2,118.09
+Mercado Orion do Sul,2,703.16
+Escola Alvorada da Praça,2,303.22
+Comercial Aroeira,2,825.59
+Farmácia Cedro,2,146.40
+Solar Soluções Digitais,2,57.35
+Mandacaru Cargas,2,191.52
+Empório Jatobá das Palmeiras,2,474.49
+Jacarandá Arquitetura da Vila,2,302.20
+Mandacaru Cargas do Lago,1,1851.44
+Raízes Consultoria em TI,1,346.57
+Atacado Canela da Praça,1,138.98
+Mercado Orion do Lago,1,2470.47
+Íris Software da Praça,1,68.51
+Instituto de Ensino Raízes das Palmeiras,1,159.60
+Instituto de Ensino Íris,1,171.39
+Alvorada Sistemas,1,62.13
+Mercado Candeia,1,798.75
+Sereno Software do Lago,1,30.58
+Aurora Consultoria em TI do Litoral,1,632.85
+Casa de Materiais Sereno do Vale,1,171.86
+Ipê Consultoria Financeira,1,170.33
+Jacarandá Gestão da Vila,1,318.09
+Atlântico Software das Palmeiras,1,301.89
+Boa Vista Software,1,62.87
+Sereno Software da Colina,1,367.82
+Comercial Veredas do Bosque,1,151.47
+Empório Alvorada do Norte,1,31.68
+Candeia Soluções Digitais do Vale,1,344.13
+Odontologia Cedro do Lago,1,62.74
+Paineira Manutenção da Serra,1,29.52
+Cedro Cargas do Campo,1,838.58
+Raízes Consultoria do Vale,1,29.65
+Casa de Materiais Essência do Norte,1,739.90
+Casa de Materiais Aroeira do Lago,1,26.49
+Indústria Candeia das Palmeiras,1,184.22
+Ipê Tecnologia do Lago,1,68.40
+Jacarandá Gestão da Praça,1,25.47
+Nascente Logística da Vila,1,507.90
+Jatobá Sistemas das Palmeiras,1,129.07
+Sabiá Tecnologia da Colina,1,155.72
+Nascente Consultoria Financeira do Cerrado,1,71.12
+Embalagens Pontal do Sol,1,648.38
+Raízes Software dos Jardins,1,68.05
+Empório Jacarandá do Norte,1,1742.19
+Atlântico Logística do Norte,1,366.11
+Paineira Consultoria em TI da Lagoa,1,141.87
+Alvorada Software do Sul,1,165.11
+Travessia Engenharia da Colina,1,70.60
+Empório Harmonia,1,61.31
+Clínica Ipê do Litoral,1,140.82
+Mercado Solar das Palmeiras,1,487.15
+Mandacaru Soluções Digitais da Lagoa,1,63.68
+Metalúrgica Sabiá da Praça,1,334.58
+Têxtil Sereno dos Jardins,1,63.09
+Farmácia Boa Vista,1,498.26
+Casa de Materiais Essência da Colina,1,77.39
+Ipê Consultoria da Serra,1,26.91
+Essência Consultoria em TI do Vale,1,169.73
+Instituto de Ensino Harmonia,1,27.13
+Comercial Atlântico,1,429.27
+Jatobá Consultoria da Vila,1,128.75
+Atacado Atlântico do Bosque,1,752.40
+Vértice Assessoria Financeira do Campo,1,140.99
+Empório Aurora do Norte,1,354.01
+Jacarandá Armazéns da Lagoa,1,770.02
+Harmonia Arquitetura,1,65.06
+Distribuidora Íris da Praça,1,24.70
+Distribuidora Veredas da Serra,1,317.70
+Íris Software do Litoral,1,127.18
+Acácia Software,1,72.62
+Travessia Arquitetura,1,301.20
+Empório Prisma,1,140.78
+Laboratório Aroeira do Bosque,1,29.91
+Horizonte Gestão Financeira,1,376.38
+Casa de Materiais Acácia,1,28.59
+Essência Crédito,1,64.67
+Travessia Engenharia da Lagoa,1,174.04
+Alimentos Nascente,1,58.70
+Essência Consultoria em TI do Campo,1,386.01
+Empório Veredas da Colina,1,69.33
+Centro Médico Alvorada,1,73.25
+Essência Arquitetura da Vila,1,161.27
+Acácia Sistemas,1,148.77
+Comercial Íris do Lago,1,782.32
+Casa de Materiais Mandacaru dos Jardins,1,60.44
+Centro Educacional Orion,1,59.93
+Centro Educacional Vértice,1,32.03
+Mercado Aurora,1,794.49
+Odontologia Vértice,1,173.10
+Escola Alvorada,1,60.65
+Atacado Atlântico,1,68.30
+Farmácia Caminhos da Serra,1,142.03
+Jatobá Soluções Digitais da Serra,1,76.05
+Metalúrgica Aurora,1,339.38
+Travessia Software,1,71.26
+Atacado Vértice,1,270.48
+Pontal Software,1,215.05
+Aurora Arquitetura da Praça,1,66.75
+Prisma Software,1,193.02
+Caminhos Cargas do Lago,1,139.48
+Harmonia Software do Bosque,1,152.75
+Colégio Boa Vista do Lago,1,144.49
+Distribuidora Canela da Lagoa,1,68.65
+Casa de Materiais Jatobá das Palmeiras,1,145.81
+Essência Tecnologia da Vila,1,61.26
+Atacado Candeia das Palmeiras,1,57.04
+Alimentos Sereno do Cerrado,1,129.24
+Caminhos Gestão das Palmeiras,1,164.63
+Solar Logística do Norte,1,143.08
+Escola Caminhos do Norte,1,58.16
+Íris Sistemas,1,699.58
+Empório Travessia do Lago,1,28.87
+Cedro Consultoria em TI,1,348.40
+Solar Armazéns do Bosque,1,315.12
+Sereno Assessoria Financeira do Sul,1,356.48
+Canela Soluções Digitais do Norte,1,327.70
+Sereno Logística do Sul,1,74.05
+Cedro Assessoria Financeira da Serra,1,161.29
+Têxtil Íris,1,3544.51
+Empório Prisma da Vila,1,68.10
+Têxtil Aroeira das Palmeiras,1,491.07
+Distribuidora Boa Vista,1,65.78
+Cedro Consultoria em TI do Lago,1,405.49
