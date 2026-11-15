@@ -33,7 +33,7 @@ FROM grandes_clientes;
 
 SELECT c.nome_empresa AS Cliente, ROUND(
     (SUM(p.valor) / SUM(SUM(p.valor)) OVER()) * 100, 2
-) || '%' AS "Percentual de contribuição"
+) AS percentual_contribuicao
 FROM nexus.clientes c
 JOIN nexus.contratos a ON a.id_cliente = c.id
 JOIN nexus.pagamentos p ON a.id = p.id_contrato
