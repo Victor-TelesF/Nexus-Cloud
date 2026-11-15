@@ -1,7 +1,7 @@
 [project]
 name = "nexus-cloud"
 version = "0.1.0"
-description = "Add your description here"
+description = "Analytics engineering project for a B2B cloud infrastructure provider — PostgreSQL, Pandas, Streamlit"
 readme = "README.md"
 authors = [
     { name = "victor", email = "victortf986@gmail.com" }
