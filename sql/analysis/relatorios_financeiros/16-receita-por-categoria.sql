@@ -18,8 +18,8 @@ WITH resumo_receita AS (
 
 )
 SELECT categoria, 
-'R$ '|| to_char(receita_categoria, 'FM999G999G990D99') AS "Receita Total por Categoria", 
-ROUND((receita_categoria / receita_total_geral) * 100, 2) || '%' AS percentual
+receita_categoria AS receita_por_categoria, 
+ROUND((receita_categoria / receita_total_geral) * 100, 2) AS percentual
 FROM resumo_receita
 ORDER BY (receita_categoria / receita_total_geral) DESC;
 
