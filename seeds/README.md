@@ -1,4 +1,4 @@
-# Dados fictícios para estudo
+# Geração de dados sintéticos
 
 Na raiz do repositório, com `.env` configurado a partir de [`.env.example`](../.env.example), execute:
 
@@ -20,7 +20,7 @@ O contêiner da carga encerra após o trabalho; não precisa ficar em execução
 | `pagamentos` | 30.000 |
 | `servidores` | 30 |
 
-Se qualquer uma dessas tabelas já contiver registros, `--if-empty` ignora a carga. Isso também preserva uma base que você já utiliza para estudar; não completa bases parcialmente preenchidas. Um schema com estrutura incompatível gera um erro, sem adaptar ou apagar as tabelas existentes. Consulte `docker compose logs seed` se a carga terminar com código diferente de `0`.
+Se qualquer uma dessas tabelas já contiver registros, `--if-empty` ignora a carga. Esse comportamento preserva a base existente e não completa bases parcialmente preenchidas. Um schema com estrutura incompatível gera um erro, sem adaptar ou apagar as tabelas existentes. Consulte `docker compose logs seed` se a carga terminar com código diferente de `0`.
 
 Os dados ficam no volume `postgres_data`; o manifesto da carga, no volume `seed_state`. `docker compose down` preserva ambos. Para repetir apenas a verificação e a carga de uma base vazia, use `docker compose run --rm seed`.
 
@@ -34,7 +34,7 @@ Para definir uma data-base explicitamente em uma base vazia:
 docker compose run --rm seed python seeds/seed.py --init-schema --if-empty --seed 42 --as-of 2026-10-28
 ```
 
-A data-base não pode ser futura. Os resultados numéricos das consultas de estudo podem diferir dos resultados já registrados no checklist, que identificam a base e a versão usadas em cada revisão.
+A data-base não pode ser futura. A semente e a data-base não são suficientes para identificar sozinhas uma execução: preserve também a versão do gerador e os parâmetros do manifesto. Uma nova carga pode produzir resultados diferentes dos [CSVs disponíveis](../reports/).
 
 ## Execução local opcional
 
@@ -50,3 +50,9 @@ uv run --env-file .env python seeds/seed.py --init-schema --dry-run
 A conexão aceita `DATABASE_URL`; quando ausente, usa `PGHOST`, `PGPORT`, `PGUSER`, `PGPASSWORD` e `PGDATABASE`, ou os equivalentes `POSTGRES_*` de `.env`. No host, o endereço padrão é `127.0.0.1` e a porta é `POSTGRES_PORT`. No serviço Docker, o endereço é `db` e a porta interna é `5432`.
 
 O script resolve o modelo e o diretório padrão `.nexus-seed/` a partir de sua própria localização, independentemente do diretório corrente. O arquivo `.env` precisa ser carregado explicitamente, como no comando acima. `--state-dir` permite escolher outro diretório para o manifesto ao trabalhar com outro banco. Credenciais e manifestos locais são ignorados pelo Git.
+
+## Validação e limites
+
+O gerador valida tipos, chaves, valores, cronologia e quantidades antes da carga e compara os registros persistidos com os registros esperados. Há testes em [tests/test_seed.py](../tests/test_seed.py), incluindo cenários de reversão, repetição de carga e preservação de bases existentes. Os testes de integração exigem PostgreSQL descartável via `NEXUS_SEED_TEST_DSN` e criam bancos temporários.
+
+Na revisão documental de 18/11/2026, o comportamento foi conferido pela leitura do código, do Dockerfile e do Compose. Não houve nova carga, execução desses testes ou alteração dos volumes. A base representa um domínio fictício, com distribuições e valores definidos pelo gerador; não é uma amostra de operação real.
