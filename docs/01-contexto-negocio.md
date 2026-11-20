@@ -1,6 +1,6 @@
 # A empresa e os dados
 
-A Nexus Cloud vende infraestrutura para outras empresas. Uma cliente pode hospedar uma aplicação, contratar um banco gerenciado e aumentar o armazenamento em momentos diferentes. Cada contratação gera um contrato, e o mesmo contrato pode originar diversas cobranças mensais. Essa distinção determina o que contar quando o comercial pede “quantos contratos” e o financeiro pede “quanto recebemos”.
+A Nexus Cloud é uma empresa fictícia de infraestrutura em nuvem B2B. Todos os dados do projeto são sintéticos. Uma empresa cliente pode hospedar uma aplicação, contratar um banco gerenciado e aumentar o armazenamento em momentos diferentes. Cada contratação gera um contrato, e o mesmo contrato pode originar diversas cobranças mensais. Essa distinção determina o que contar quando o comercial pede “quantos contratos” e o financeiro pede “quanto recebemos”.
 
 ![Modelo de dados do schema nexus](assets/data-model.svg)
 
@@ -18,7 +18,8 @@ A Nexus Cloud vende infraestrutura para outras empresas. Uma cliente pode hosped
 - **Receita recebida.** Uma cobrança paga em novembro, com vencimento em outubro, entra no caixa de novembro. Cobranças pendentes e atrasadas continuam em aberto. Um pagamento já regularizado pode ter ocorrido depois do prazo.
 - **Inadimplência.** Defina se o pedido é por valor, quantidade de cobranças ou quantidade de clientes. Em um percentual, explicite numerador, denominador e período. O banco guarda a situação atual, sem um histórico completo das mudanças de status.
 - **Estimativa do relatório 18.** A diferença pedida é entre a receita mensal contratada e o custo mensal estimado, em R$, para os contratos administrativamente ativos. Use os valores atuais do catálogo e identifique a data de referência. O modelo não guarda versões históricas dos preços e custos nem um rateio de servidores por cliente.
+- **Cancelamentos.** O relatório 21 mede contratos com status cancelado sobre todos os contratos registrados. Sem uma janela de cancelamento e uma população de clientes no início do período, esse percentual não mede logo churn.
 - **Granularidade.** Ao associar um contrato a três cobranças, o valor mensal do catálogo reaparece três vezes. Antes de agregar, determine se cada linha deveria representar uma cobrança, um contrato ou um cliente.
-- **Base sintética.** Registre a data de referência ao comparar resultados. Filtros como “últimos 90 dias” dependem da data de execução. Use os números obtidos na base estudada, inclusive quando o resultado estiver vazio.
+- **Base sintética.** Registre a data de referência ao comparar resultados. Filtros como “últimos 90 dias” dependem da data de execução. Identifique a carga e a data de extração ao registrar números, inclusive quando o resultado estiver vazio.
 
 A [definição das tabelas](../sql/models/model.sql) é a referência do repositório. Os nomes atuais usam o schema `nexus` e a tabela de serviços no singular.
