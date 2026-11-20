@@ -1,62 +1,69 @@
 <p align="center">
-  <img src="docs/assets/nexus-cloud-banner.svg" alt="Nexus Cloud — análise de dados de infraestrutura em nuvem" width="100%">
+  <img src="docs/assets/nexus-cloud-banner.svg" alt="Nexus Cloud — inteligência de dados e análise financeira em nuvem" width="100%">
 </p>
 
-# Nexus Cloud
+<p align="center">
+  <img src="https://img.shields.io/badge/PostgreSQL-17-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL 17">
+  <img src="https://img.shields.io/badge/Python-3.13-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.13">
+  <img src="https://img.shields.io/badge/pandas-3.1-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
+  <img src="https://img.shields.io/badge/Streamlit-1.66-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit">
+  <img src="https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker Compose">
+  <img src="https://img.shields.io/badge/uv-Package_Manager-DE5FE9?style=for-the-badge&logo=astral&logoColor=white" alt="uv">
+</p>
 
-Projeto de análise de dados de uma empresa fictícia de infraestrutura em nuvem B2B. O banco PostgreSQL armazena clientes, serviços, contratos e cobranças; as consultas SQL analisam a carteira comercial, a receita recebida e os pagamentos em atraso.
+# Nexus Cloud · Analytics Engineering & Data Intelligence
 
-O trabalho reúne modelagem relacional, geração de dados sintéticos, 25 consultas SQL e análises em Python/pandas. As visualizações em Jupyter estão em desenvolvimento. A aplicação Streamlit contém a página inicial; os indicadores do painel ainda estão planejados.
+**Quanto a provedora de nuvem vendeu, quanto cobrou e quanto de fato entrou no caixa?**
+
+Na Nexus Cloud, uma empresa fictícia de infraestrutura B2B, um cliente pode contratar um banco de dados em janeiro, receber uma cobrança em fevereiro e pagá-la em março. Para o comercial, janeiro marca uma nova contratação. Para o financeiro, o dinheiro entra em março. As 25 consultas em PostgreSQL acompanham esse percurso, da carteira de serviços ao recebimento de cada cobrança.
+
+[Explorar as consultas](docs/02-desafios-sql.md) · [Ver as entregas e os CSVs](docs/03-progresso.md) · [Abrir os notebooks](notebooks/README.md)
+
+## 📌 Sumário executivo
+
+A base sintética reúne 1.000 clientes e 5.000 contratos. A série de recebimentos cobre novembro de 2023 a outubro de 2026. O saldo em atraso e a estimativa mensal retratam a situação da carteira na exportação.
+
+| Pergunta de negócio | Resultado | Fonte |
+| --- | --- | --- |
+| Quanto entrou no caixa em 36 meses? | **R$ 6.858.603,06**. As somas por mês, categoria e setor coincidem. | [Por mês](reports/relatorios_financeiros/13_receita_mensal_recebida.csv) · [Por setor](reports/analise_avancada/23_receita_recebida_por_setor.csv) |
+| Qual categoria mais contribuiu para a receita? | **Banco de dados**, com R$ 3.196.190,92, ou **46,60%** do total recebido. | [Receita por categoria](reports/relatorios_financeiros/16_receita_recebida_por_categoria.csv) |
+| Quanto estava em atraso na carteira exportada? | **R$ 1.308.648,71** em 4.740 cobranças de 660 clientes. Isso equivale a **15,37%** dos R$ 8.515.680,85 cobrados. | [Saldo por cliente](reports/relatorios_financeiros/14_clientes_cobrancas_atrasadas.csv) · [Taxa por valor](reports/relatorios_financeiros/17_taxa_inadimplencia.csv) |
+| Quanto a carteira ativa representa por mês? | **R$ 1.065.381,00** contratados. Aplicando o custo atual dos serviços, de R$ 567.879,11, a diferença mensal estimada é de **R$ 497.501,89**. | [Estimativa da carteira ativa](reports/relatorios_financeiros/18_receita_contratada_custos_operacionais.csv) |
+
+## 🚀 Trilha analítica
+
+**01–05 · Conhecendo a empresa.** São Paulo concentra 297 dos 1.000 clientes cadastrados. A mesma etapa examina o que a provedora tem para oferecer, dos preços do catálogo aos 95,74 TB de armazenamento nos 27 servidores ativos. [Clientes por estado](reports/conhecendo_a_empresa/01_distribuicao_geografica_clientes.csv) · [Infraestrutura ativa](reports/conhecendo_a_empresa/04_infraestrutura_servidores_ativos.csv)
+
+**06–12 · Contratos e operações.** Há duas populações distintas por trás de “clientes sem contrato ativo”. Na base exportada, 184 empresas nunca contrataram um serviço. Outras 20 já contrataram, mas na data da exportação só tinham contratos suspensos ou cancelados. [Sem contratação histórica](reports/relacionamentos_e_operacoes/07_clientes_sem_contratos.csv) · [Com histórico e sem contrato ativo](reports/relacionamentos_e_operacoes/12_clientes_sem_contratos_ativos.csv)
+
+**13–19 · Receita e concentração.** Banco de dados responde por quase metade da receita. Quando a pergunta muda de *qual categoria gera receita* para *quem paga*, os cinco maiores clientes, somados, representam 5,67% de todo o valor recebido. [Participação por categoria](reports/relatorios_financeiros/16_receita_recebida_por_categoria.csv) · [Concentração nos cinco maiores clientes](reports/relatorios_financeiros/19_concentracao_receita_cinco_clientes_conjunta.csv)
+
+**20–25 · Evolução e comportamento de pagamento.** As séries mensais acompanham novas contratações e variação da receita. Dos 5.000 contratos, 816 constam como cancelados (16,32% do histórico). Entre as 7.107 cobranças quitadas após o vencimento, o atraso médio foi de **26,67 dias**. [Evolução da receita](reports/analise_avancada/22_crescimento_receita_mensal.csv) · [Cancelamentos](reports/analise_avancada/21_contratos_cancelados.csv) · [Dias de atraso](reports/analise_avancada/24_pagamentos_atrasados_media_dias.csv)
+
+**26–30 · Diagnósticos visuais e painel.** Os notebooks de [diagnóstico comercial](notebooks/26-diagnostico-comercial.ipynb) e [receita por categoria](notebooks/27-mix-receita-categorias.ipynb) já têm gráficos salvos e aguardam interpretação e validação. A segmentação da carteira e a análise de risco têm enunciados definidos. O Streamlit exibe a página inicial, e os indicadores estão descritos na [especificação do painel](docs/04-visualizacoes-dashboard.md).
+
+## 🏗️ Modelo de dados e regras de negócio
+
+<p align="center">
+  <img src="docs/assets/data-model.svg" alt="Modelo relacional das cinco tabelas do schema nexus" width="85%">
+</p>
+
+Cada linha de `nexus.contratos` liga um cliente a um serviço. Como um contrato pode gerar várias cobranças em `nexus.pagamentos`, somar a mensalidade depois de juntar essas tabelas pode multiplicar a receita contratada. O relatório 18 conta cada contrato ativo uma vez e usa o preço e o custo atuais de `nexus.servico`. Já a receita recebida usa o valor da cobrança paga e sua data efetiva de pagamento.
+
+O modelo usa `NUMERIC(10,2)` para valores monetários e admite uma cobrança por contrato e data de vencimento. Os servidores têm cadastro independente, sem vínculo que permita ratear seu custo por contrato. [Modelo SQL](sql/models/model.sql) · [Regras de negócio](docs/01-contexto-negocio.md)
+
+## 🛠️ Tecnologias e organização
+
+| Etapa | Tecnologias | Onde explorar |
+| --- | --- | --- |
+| Gerar e armazenar os dados | Python, PostgreSQL 17 e Docker Compose | [Gerador e instruções de carga](seeds/README.md) |
+| Consultar a carteira e os recebimentos | SQL, CTEs e funções de janela | [Consultas](sql/analysis/) · [Resultados em CSV](reports/) |
+| Explorar e visualizar | Jupyter, pandas, Matplotlib e acesso ao PostgreSQL via SQLAlchemy e psycopg | [Notebooks](notebooks/) |
+| Apresentar os indicadores previstos | Streamlit | [Página inicial do painel](dashboards/app.py) |
 
 A revisão das consultas e análises conta com assistência de IA e segue os [critérios de validação do projeto](docs/05-criterios-correcao.md).
 
-## Contexto de negócio
-
-Um cliente pode contratar vários serviços, e cada contrato pode gerar várias cobranças. O projeto investiga a composição dessa carteira, a evolução das contratações e a concentração dos recebimentos. As análises distinguem receita mensal contratada, valor cobrado e dinheiro efetivamente recebido.
-
-A [documentação do domínio](docs/01-contexto-negocio.md) define como tratar atividade dos contratos, datas de pagamento, inadimplência e custos estimados. O [catálogo analítico](docs/02-desafios-sql.md) reúne as perguntas e os arquivos correspondentes.
-
-## Tecnologias
-
-- PostgreSQL 17 em Docker Compose para persistência e consultas analíticas.
-- Python 3.13 ou superior, pandas e NumPy para leitura e análise dos dados.
-- Jupyter no VS Code, Matplotlib e seaborn para exploração e visualização.
-- SQLAlchemy e psycopg para acesso ao banco; Pydantic Settings para configuração local.
-- Streamlit para o painel em desenvolvimento e uv para gerenciar o ambiente Python.
-
-Os requisitos estão em [pyproject.toml](pyproject.toml), com versões resolvidas em [uv.lock](uv.lock). O contêiner de carga usa Python 3.13; PostgreSQL usa a imagem `postgres:17`.
-
-## Arquitetura e modelo
-
-O serviço `seed` gera os dados e inicializa o schema `nexus` em uma base vazia. As consultas em `sql/analysis/` têm resultados exportados em `reports/`. Os notebooks consomem esses CSVs e também consultam o PostgreSQL. O Compose inicia o banco e a carga; Jupyter e Streamlit executam no ambiente Python local.
-
-<p align="center">
-  <img src="docs/assets/data-model.svg" alt="Modelo relacional do schema nexus" width="85%">
-</p>
-
-O modelo tem cinco tabelas: `clientes`, `servico`, `contratos`, `pagamentos` e `servidores`. Clientes e serviços se relacionam por contratos; cobranças apontam para contratos. Servidores têm cadastro independente, sem vínculo que permita ratear seu custo por contrato.
-
-O [DDL](sql/models/model.sql) define chaves primárias e estrangeiras, valores monetários `NUMERIC(10,2)`, restrições de status e datas, e unicidade do par contrato/vencimento. Preços e custos do catálogo não têm histórico de versões.
-
-## Análises e resultados disponíveis
-
-**Todos os valores abaixo vêm de dados sintéticos.** Os CSVs disponíveis abrangem recebimentos de novembro de 2023 a outubro de 2026. Os totais foram conferidos entre os arquivos exportados. Uma nova carga ou data de execução pode produzir outros resultados.
-
-- **Receita recebida:** R$ 6.858.603,06 em 36 meses. As somas por mês, categoria e setor coincidem. Fontes: relatórios [13](reports/relatorios_financeiros/13_receita_mensal_recebida.csv), [16](reports/relatorios_financeiros/16_receita_recebida_por_categoria.csv) e [23](reports/analise_avancada/23_receita_recebida_por_setor.csv).
-- **Composição da receita:** Banco de dados representa R$ 3.196.190,92, ou 46,60% dos recebimentos do histórico. Fonte: [receita por categoria](reports/relatorios_financeiros/16_receita_recebida_por_categoria.csv).
-- **Cobranças em atraso:** R$ 1.308.648,71 em 4.740 cobranças de 660 clientes. O valor corresponde a 15,37% dos R$ 8.515.680,85 de todas as cobranças registradas na fotografia exportada. Fontes: relatórios [14](reports/relatorios_financeiros/14_clientes_cobrancas_atrasadas.csv) e [17](reports/relatorios_financeiros/17_taxa_inadimplencia.csv).
-- **Estimativa mensal contratada:** R$ 1.065.381,00 de receita contratada e R$ 567.879,11 de custo estimado, com diferença de R$ 497.501,89. O cálculo usa preços e custos atuais por contrato administrativamente ativo; não apura lucro operacional nem caixa realizado. Fonte: [relatório 18](reports/relatorios_financeiros/18_receita_contratada_custos_operacionais.csv).
-- **Contratos cancelados:** 816 entre 5.000 contratos registrados, ou 16,32%. É uma proporção do histórico por status atual, sem janela de cancelamento ou denominador de clientes; não representa logo churn. Fonte: [relatório 21](reports/analise_avancada/21_contratos_cancelados.csv).
-
-## Estado atual
-
-As consultas 01–25 estão implementadas, com 30 CSVs disponíveis, pois alguns arquivos contêm mais de uma consulta. O [resumo dos 30 desafios](docs/03-progresso.md) reúne a situação e os arquivos de cada entrega.
-
-Os notebooks [26](notebooks/26-diagnostico-comercial.ipynb) e [27](notebooks/27-mix-receita-categorias.ipynb) contêm código e gráficos salvos, com validação analítica e interpretação ainda pendentes. Os notebooks [28](notebooks/28-segmentacao-carteira.ipynb) e [29](notebooks/29-monitoramento-risco.ipynb) contêm somente o escopo previsto. O [painel](dashboards/app.py) exibe o título do projeto e ainda não tem consultas, métricas ou filtros.
-
-O próximo trabalho previsto é concluir e validar as análises visuais, implementar a segmentação e o risco financeiro e reunir os indicadores no Streamlit, conforme a [especificação visual](docs/04-visualizacoes-dashboard.md).
-
-## Execução local
+## ⚙️ Execução local
 
 Para o banco e a carga, são necessários Docker e Docker Compose com suporte a `docker compose wait`. Para notebooks e Streamlit, use Python 3.13 ou superior e uv. Execute os comandos a partir da raiz do repositório.
 
